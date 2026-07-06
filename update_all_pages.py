@@ -362,7 +362,7 @@ def generate_sitemap(schemes):
     # General files
     for gf in GENERAL_PAGES:
         sitemap_content += f"""  <url>
-    <loc>https://www.yojanaguide.in/{gf}</loc>
+    <loc>https://yojana-three.vercel.app/{gf}</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{"1.0" if gf == "index.html" else "0.8"}</priority>
@@ -371,7 +371,7 @@ def generate_sitemap(schemes):
     # Schemes
     for s in schemes:
         sitemap_content += f"""  <url>
-    <loc>https://www.yojanaguide.in/{s["id"]}.html</loc>
+    <loc>https://yojana-three.vercel.app/{s["id"]}.html</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
