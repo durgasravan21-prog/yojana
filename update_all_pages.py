@@ -179,6 +179,12 @@ def update_all_files():
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
             
+        # 0. Inject Google AdSense Script in <head>
+        adsense_tag = 'client=ca-pub-7490572944753317'
+        if adsense_tag not in content:
+            adsense_code = '  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7490572944753317" crossorigin="anonymous"></script>'
+            content = content.replace('</head>', f'{adsense_code}\n</head>')
+            
         # 1. Update Navigation
         active_page = filename.replace(".html", "")
         if active_page not in ['index', 'categories', 'about', 'contact']:
