@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all government scheme categories - Agriculture, Health, Housing, Education, Women & Child Development, and Financial Inclusion schemes in India.">
+  <meta name="keywords" content="Government Scheme Categories, Sarkari Yojana Categories, Agriculture Schemes, Health Schemes, Housing Schemes">
+  <meta name="robots" content="index, follow">
+  <title>All Categories - Yojana Guide | Government Scheme Categories</title>
+  <meta property="og:title" content="All Categories - Yojana Guide">
+  <meta property="og:description" content="Browse government schemes by category - Agriculture, Health, Housing, Education, and more.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.yojanaguide.in/categories.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="Yojana Guide Home">
+        <span class="logo-icon" aria-hidden="true">🏛️</span>
+        <span class="logo-text">Yojana<span>Guide</span></span>
+      </a>
+            <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="">Home</a></li>
+          <li><a href="categories.html" class="active">Categories</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Popular Schemes <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="pm-kisan.html">PM Kisan Samman Nidhi</a></li>
+              <li><a href="ayushman-bharat.html">Ayushman Bharat PM JAY</a></li>
+              <li><a href="ujjwala-yojana.html">PM Ujjwala Yojana Gas</a></li>
+              <li><a href="pm-awas.html">PM Awas Yojana Rural</a></li>
+              <li><a href="sukanya-samriddhi.html">Sukanya Samriddhi Yojana Account</a></li>
+              <li><a href="mudra-yojana.html">PM Mudra Yojana Loans</a></li>
+              <li><a href="pm-surya-ghar.html">PM Surya Ghar Muft Bijli</a></li>
+              <li><a href="lakhpati-didi.html">Lakhpati Didi Self Help Groups</a></li>
+              <li><a href="pm-vishwakarma.html">PM Vishwakarma Artisans Support</a></li>
+              <li><a href="jan-dhan.html">PM Jan Dhan Yojana Accounts</a></li>
+              <li><a href="atal-pension.html">Atal Pension Yojana APY</a></li>
+              <li><a href="pm-kaushal-vikas.html">PM Kaushal Vikas Yojana</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="">About</a></li>
+          <li><a href="contact.html" class="">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>All Scheme Categories</h1>
+      <p>Browse government schemes organized by sector and focus area</p>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator" aria-hidden="true">›</li>
+        <li class="current" aria-current="page">Categories</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <section class="section">
+      <div class="container">
+        
+        <!-- Search Section -->
+        <div class="categories-search-section" style="margin-bottom: 3rem;">
+          <div class="categories-search-container" style="max-width: 600px; margin: 0 auto; display: flex; gap: 0.5rem; box-shadow: var(--shadow-card); background: var(--white); padding: 0.5rem; border-radius: 50px; border: 1px solid var(--light-gray); transition: all 0.3s ease;">
+            <input type="text" id="categories-search-input" placeholder="Search schemes... (e.g. PM Kisan, Ayushman)" style="flex: 1; border: none; background: transparent; padding: 0.75rem 1.5rem; font-size: 1rem; color: var(--text-main); outline: none;" aria-label="Search government schemes in categories">
+            <button type="button" id="categories-search-btn" style="background: var(--primary-color); color: var(--white); border: none; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: background 0.2s;" aria-label="Search">🔍 Search</button>
+          </div>
+        </div>
+
+        <!-- Filter Header -->
+        <div id="active-filter-header" style="display: none; align-items: center; justify-content: space-between; margin-bottom: 2rem; border-bottom: 2px solid var(--accent-orange); padding-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+          <h2 id="filter-title" style="margin: 0; font-size: 1.8rem; color: var(--primary-dark);">Agriculture & Farming Schemes</h2>
+          <button class="back-btn" onclick="showCategoryGrid()" style="background: var(--white); color: var(--text-main); border: 1px solid var(--light-gray); padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.2s;">← Back to Categories</button>
+        </div>
+
+        <!-- Categories Page Grid (12 Sector Cards) -->
+        <!-- CATEGORIES_GRID_START -->
+        <div class="categories-page-grid">
+
+          <div class="category-full-card" onclick="filterByCategory('agriculture', 'Agriculture & Farming')">
+            <span class="cat-icon" aria-hidden="true">🌾</span>
+            <h3>Agriculture & Farming</h3>
+            <p>Government schemes supporting farmers with financial assistance, crop insurance, irrigation subsidies, and agricultural loans.</p>
+            <span class="scheme-badge">35 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('health', 'Health & Medical')">
+            <span class="cat-icon" aria-hidden="true">🏥</span>
+            <h3>Health & Medical</h3>
+            <p>Healthcare schemes providing insurance coverage, medical assistance, and hospital access for families.</p>
+            <span class="scheme-badge">30 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('housing', 'Housing & Shelter')">
+            <span class="cat-icon" aria-hidden="true">🏠</span>
+            <h3>Housing & Shelter</h3>
+            <p>Affordable housing programs and rooftop solar utility subsidy programs providing direct incentives.</p>
+            <span class="scheme-badge">15 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('education', 'Education & Skill Development')">
+            <span class="cat-icon" aria-hidden="true">📚</span>
+            <h3>Education & Skill Development</h3>
+            <p>Scholarship programs, skill training initiatives, and educational assistance for students and traditional artisans.</p>
+            <span class="scheme-badge">35 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('women', 'Women & Child Development')">
+            <span class="cat-icon" aria-hidden="true">👩‍👧</span>
+            <h3>Women & Child Development</h3>
+            <p>Empowerment programs for women and children including savings schemes, maternity benefits, and nutrition programs.</p>
+            <span class="scheme-badge">35 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('finance', 'Financial Inclusion & Business')">
+            <span class="cat-icon" aria-hidden="true">💰</span>
+            <h3>Financial Inclusion & Business</h3>
+            <p>Banking access, micro-finance loans, pension schemes, and entrepreneurship support programs.</p>
+            <span class="scheme-badge">35 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('employment', 'Employment & Self-Employment')">
+            <span class="cat-icon" aria-hidden="true">💼</span>
+            <h3>Employment & Self-Employment</h3>
+            <p>Employment guarantees, job creation initiatives, and seed funding support for startups.</p>
+            <span class="scheme-badge">35 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('pension', 'Pension & Social Security')">
+            <span class="cat-icon" aria-hidden="true">👴</span>
+            <h3>Pension & Social Security</h3>
+            <p>Social security, pensions, and insurance safety nets for unorganized workers and senior citizens.</p>
+            <span class="scheme-badge">20 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('rural', 'Rural Development')">
+            <span class="cat-icon" aria-hidden="true">🏘️</span>
+            <h3>Rural Development</h3>
+            <p>Welfare and infrastructure development schemes targeting rural infrastructure, water supply, and rural employment.</p>
+            <span class="scheme-badge">15 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('energy', 'Energy & Power')">
+            <span class="cat-icon" aria-hidden="true">⚡</span>
+            <h3>Energy & Power</h3>
+            <p>Power and electricity initiatives focusing on rural electrification, free solar installations, and green energy.</p>
+            <span class="scheme-badge">10 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('infrastructure', 'Infrastructure & Development')">
+            <span class="cat-icon" aria-hidden="true">🏗️</span>
+            <h3>Infrastructure & Development</h3>
+            <p>National programs for smart cities development, urban rejuvenation, and robust roads networks development.</p>
+            <span class="scheme-badge">15 Schemes</span>
+          </div>
+          <div class="category-full-card" onclick="filterByCategory('social', 'Social Welfare & Security')">
+            <span class="cat-icon" aria-hidden="true">🤝</span>
+            <h3>Social Welfare & Security</h3>
+            <p>Nutritional support programs, generic medicine provision, and safety nets for the marginalized.</p>
+            <span class="scheme-badge">30 Schemes</span>
+          </div>        </div>
+        <!-- CATEGORIES_GRID_END -->
+
+        <!-- Schemes List Results (310 detailed scheme cards, filtered dynamically) -->
+        <!-- SCHEMES_RESULTS_START -->
+        <div id="schemes-results-section" style="display: none;">
+          <div class="schemes-grid" id="schemes-list-container">
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="agri-census-scheme.html">Agriculture Census Scheme</a></h3>
+            <p>Collection of data on operational holdings and farming structures</p>
+            <a href="agri-census-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="agri-extension-mission.html">National Mission on Agricultural Extension</a></h3>
+            <p>Technology dissemination and extension training for farmers</p>
+            <a href="agri-extension-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="agri-infra-fund.html">Agriculture Infrastructure Fund</a></h3>
+            <p>Post-harvest management and community farming assets support</p>
+            <a href="agri-infra-fund.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="agri-mechanization.html">Sub</a></h3>
+            <p>Subsidies for buying modern farm machinery</p>
+            <a href="agri-mechanization.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="atma-scheme.html">Support to State Extension Programmes</a></h3>
+            <p>Extension reforms through Agriculture Technology Management Agency</p>
+            <a href="atma-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="coconut-board-schemes.html">Coconut Development Board Schemes</a></h3>
+            <p>Financial aid for coconut farming and processing</p>
+            <a href="coconut-board-schemes.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="dairy-development.html">National Programme for Dairy Development</a></h3>
+            <p>Strengthening quality milk infrastructure</p>
+            <a href="dairy-development.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="edible-oils-mission.html">National Mission on Edible Oils</a></h3>
+            <p>Self-reliance in edible oil and oil palm production</p>
+            <a href="edible-oils-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="fidf.html">Fisheries and Aquaculture Infrastructure</a></h3>
+            <p>Concessional finance for fisheries infrastructure development</p>
+            <a href="fidf.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="honey-mission.html">National Beekeeping and Honey Mission</a></h3>
+            <p>Sweet revolution through scientific beekeeping</p>
+            <a href="honey-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="horticulture-development.html">Integrated Development of Horticulture</a></h3>
+            <p>Growth of horticulture sector including fruits & vegetables</p>
+            <a href="horticulture-development.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="kisan-credit-card.html">Kisan Credit Card Scheme</a></h3>
+            <p>Short-term credit loans for agricultural needs</p>
+            <a href="kisan-credit-card.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="livestock-insurance.html">Livestock Insurance Scheme</a></h3>
+            <p>Financial protection against loss of cattle and livestock</p>
+            <a href="livestock-insurance.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="micro-irrigation-fund.html">Micro Irrigation Fund</a></h3>
+            <p>Water-use efficiency promotion through drip irrigation</p>
+            <a href="micro-irrigation-fund.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="national-bamboo-mission.html">National Bamboo Mission</a></h3>
+            <p>Development of bamboo sector value chain</p>
+            <a href="national-bamboo-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="national-livestock-mission.html">National Livestock Mission</a></h3>
+            <p>Sustainable development of livestock sector and feed availability</p>
+            <a href="national-livestock-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="nfsm.html">National Food Security Mission</a></h3>
+            <p>Increasing production of rice, wheat, pulses, and coarse cereals</p>
+            <a href="nfsm.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="paramparagat-krishi.html">Paramparagat Krishi Vikas Yojana</a></h3>
+            <p>Promotion of organic farming practices in India</p>
+            <a href="paramparagat-krishi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pm-aasha.html">PM Annadata Aay Sanraksan Abhiyan</a></h3>
+            <p>Minimum Support Price (MSP) protection for farmers</p>
+            <a href="pm-aasha.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pm-fasal-bima.html">PM Fasal Bima Yojana</a></h3>
+            <p>Crop insurance protection against natural calamities</p>
+            <a href="pm-fasal-bima.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pm-kisan-maandhan.html">PM Kisan Maandhan Yojana</a></h3>
+            <p>Pension scheme for small and marginal farmers</p>
+            <a href="pm-kisan-maandhan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pm-kisan.html">PM Kisan Samman Nidhi</a></h3>
+            <p>₹6,000 annual income support to farmer families</p>
+            <a href="pm-kisan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pm-krishi-sinchayee.html">PM Krishi Sinchayee Yojana</a></h3>
+            <p>Har Khet Ko Pani irrigation expansion scheme</p>
+            <a href="pm-krishi-sinchayee.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pm-matsya-sampada.html">PM Matsya Sampada Yojana</a></h3>
+            <p>Blue revolution fisheries development scheme</p>
+            <a href="pm-matsya-sampada.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="pmfme.html">PM Formalisation of Micro Food Processing</a></h3>
+            <p>Credit and branding support for micro food enterprises</p>
+            <a href="pmfme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="price-support-scheme.html">Price Support Scheme</a></h3>
+            <p>Procurement of pulses and oilseeds at support prices</p>
+            <a href="price-support-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="rainfed-area-dev.html">Rainfed Area Development Programme</a></h3>
+            <p>Integrated farming systems in rainfed agricultural regions</p>
+            <a href="rainfed-area-dev.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="rashtriya-gokul-mission.html">Rashtriya Gokul Mission</a></h3>
+            <p>Development and conservation of indigenous bovine breeds</p>
+            <a href="rashtriya-gokul-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="rashtriya-krishi-vikas.html">Rashtriya Krishi Vikas Yojana</a></h3>
+            <p>Holistic development of agriculture and allied sectors</p>
+            <a href="rashtriya-krishi-vikas.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="rkvy-raftaar.html">RKVY RAFTAAR</a></h3>
+            <p>Agri-business incubation and infrastructure support</p>
+            <a href="rkvy-raftaar.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="sampada.html">Scheme for Agro</a></h3>
+            <p>Creation of modern infrastructure for food processing</p>
+            <a href="sampada.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="seed-mission.html">National Mission on Seeds and Planting</a></h3>
+            <p>Availability of certified quality seeds to farmers</p>
+            <a href="seed-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="silk-industry-dev.html">Development of Silk Industry</a></h3>
+            <p>Sericulture development and silkworm seed support</p>
+            <a href="silk-industry-dev.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="soil-health-card.html">Soil Health Card Scheme</a></h3>
+            <p>Nutrient testing and recommendation cards for soil</p>
+            <a href="soil-health-card.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="agriculture">
+            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
+            <h3><a href="sustainable-agri-mission.html">National Mission for Sustainable Agriculture</a></h3>
+            <p>Climate-resilient farming practices adoption</p>
+            <a href="sustainable-agri-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="abdm.html">Ayushman Bharat Digital Mission</a></h3>
+            <p>Creation of digital health IDs and online health repository</p>
+            <a href="abdm.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="aids-control-prog.html">National AIDS Control Program</a></h3>
+            <p>Prevention, testing, and free ART treatment for HIV/AIDS</p>
+            <a href="aids-control-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="ayushman-bharat.html">Ayushman Bharat PM JAY</a></h3>
+            <p>Free health insurance up to ₹5 lakh per family</p>
+            <a href="ayushman-bharat.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="blindness-control.html">National Blindness Control Programme</a></h3>
+            <p>Free cataract surgeries and eye-screening for children</p>
+            <a href="blindness-control.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="cancer-patient-fund.html">Health Minister Cancer Patient Fund</a></h3>
+            <p>Financial assistance for oncology treatments</p>
+            <a href="cancer-patient-fund.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="elderly-healthcare-prog.html">National Program for Health Care of Elderly</a></h3>
+            <p>Specialized geriatric healthcare services in districts</p>
+            <a href="elderly-healthcare-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="foscos.html">Food Safety Compliance System</a></h3>
+            <p>Online food business registration and safety certification</p>
+            <a href="foscos.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="idsp.html">Integrated Disease Surveillance Programme</a></h3>
+            <p>Early warning signals detection for epidemic-prone diseases</p>
+            <a href="idsp.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="janani-suraksha.html">Janani Suraksha Yojana</a></h3>
+            <p>Cash incentive for promoting institutional deliveries</p>
+            <a href="janani-suraksha.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="jssk.html">Janani Shishu Suraksha Karyakram</a></h3>
+            <p>Zero-expense delivery and neonatal care in public hospitals</p>
+            <a href="jssk.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="kishor-swasthya.html">Rashtriya Kishor Swasthya Karyakram</a></h3>
+            <p>Health and hygiene promotion among adolescent youth</p>
+            <a href="kishor-swasthya.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="leprosy-eradication.html">National Leprosy Eradication Programme</a></h3>
+            <p>Free MDT treatment and leprosy surveillance</p>
+            <a href="leprosy-eradication.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="mental-health-prog.html">National Mental Health Program</a></h3>
+            <p>Availability of basic mental healthcare services</p>
+            <a href="mental-health-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="mission-indradhanush.html">Mission Indradhanush Vaccination</a></h3>
+            <p>Immunization coverage for children and pregnant women</p>
+            <a href="mission-indradhanush.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="national-dialysis-prog.html">PM National Dialysis Program</a></h3>
+            <p>Free dialysis services for BPL kidney patients</p>
+            <a href="national-dialysis-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="national-health-mission.html">National Health Mission</a></h3>
+            <p>Strengthening rural and urban primary healthcare infrastructure</p>
+            <a href="national-health-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="nikshay-poshan.html">Nikshay Poshan Yojana</a></h3>
+            <p>Nutritional support of ₹500/month for tuberculosis patients</p>
+            <a href="nikshay-poshan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="npcdcs.html">National Program for Cancer Diabetes</a></h3>
+            <p>Prevention and control of non-communicable diseases</p>
+            <a href="npcdcs.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="oral-health-prog.html">National Oral Health Program</a></h3>
+            <p>Basic dental care integration in primary health systems</p>
+            <a href="oral-health-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="organ-transplant-prog.html">National Organ Transplant Program</a></h3>
+            <p>Organ donation awareness and retrieval network setup</p>
+            <a href="organ-transplant-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="pm-abhim.html">PM Ayushman Bharat Health Infrastructure</a></h3>
+            <p>Strengthening disease surveillance and laboratory networks</p>
+            <a href="pm-abhim.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="pm-asby.html">PM Atmanirbhar Swasth Bharat Yojana</a></h3>
+            <p>Upgradation of health centers and critical care blocks</p>
+            <a href="pm-asby.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="pm-jan-aushadhi.html">PM Jan Aushadhi Pariyojana</a></h3>
+            <p>Quality generic medicines at highly affordable prices</p>
+            <a href="pm-jan-aushadhi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="pm-surakshit-matritva.html">PM Surakshit Matritva Abhiyan</a></h3>
+            <p>Free quality antenatal care on 9th of every month</p>
+            <a href="pm-surakshit-matritva.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="pm-swasthya-suraksha.html">PM Swasthya Suraksha Yojana</a></h3>
+            <p>Setting up new AIIMS and upgrading government colleges</p>
+            <a href="pm-swasthya-suraksha.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="pulse-polio.html">Pulse Polio Immunization</a></h3>
+            <p>Mass polio immunization campaigns to maintain polio-free status</p>
+            <a href="pulse-polio.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="rashtriya-arogya-nidhi.html">Rashtriya Arogya Nidhi</a></h3>
+            <p>Financial aid for poor patients receiving super-specialty treatment</p>
+            <a href="rashtriya-arogya-nidhi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="rashtriya-bal-swasthya.html">Rashtriya Bal Swasthya Karyakram</a></h3>
+            <p>Child health screening and early intervention services</p>
+            <a href="rashtriya-bal-swasthya.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="tobacco-control-prog.html">National Tobacco Control Program</a></h3>
+            <p>Public awareness and enforcement of anti-tobacco laws</p>
+            <a href="tobacco-control-prog.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="health">
+            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <span class="scheme-card-tag tag-health">Health & Medical</span>
+            <h3><a href="vector-borne-control.html">National Vector Borne Disease Control</a></h3>
+            <p>Prevention of malaria, dengue, chikungunya, kala-azar</p>
+            <a href="vector-borne-control.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="amrut.html">AMRUT Urban Rejuvenation</a></h3>
+            <p>Urban infrastructure development for tap water and parks</p>
+            <a href="amrut.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="arhc.html">Affordable Rental Housing Complexes</a></h3>
+            <p>Rental housing facilities for migrant workers and urban poor</p>
+            <a href="arhc.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="clss-housing.html">Credit Linked Subsidy Scheme</a></h3>
+            <p>Interest subvention on home loans for EWS/LIG categories</p>
+            <a href="clss-housing.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="day-nulm.html">DAY NULM Livelihoods</a></h3>
+            <p>Skills training and shelter for urban homeless citizens</p>
+            <a href="day-nulm.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="ghtc-india.html">Global Housing Technology Challenge</a></h3>
+            <p>Innovative eco-friendly housing technologies adoption</p>
+            <a href="ghtc-india.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="hriday-scheme.html">HRIDAY Heritage City Development</a></h3>
+            <p>Preservation and revitalization of heritage cities heritage</p>
+            <a href="hriday-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="pm-awas-urban.html">PM Awas Yojana Urban</a></h3>
+            <p>Affordable housing subsidies for urban poor families</p>
+            <a href="pm-awas-urban.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="pm-awas.html">PM Awas Yojana Rural</a></h3>
+            <p>Financial aid to build permanent pucca houses in villages</p>
+            <a href="pm-awas.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="pm-surya-ghar.html">PM Surya Ghar Muft Bijli</a></h3>
+            <p>Rooftop solar subsidy scheme for free electricity</p>
+            <a href="pm-surya-ghar.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="smart-cities.html">Smart Cities Mission</a></h3>
+            <p>Smart civic services and sustainable infrastructure in 100 cities</p>
+            <a href="smart-cities.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="svanidhi-samridhi.html">PM SVANidhi Shehri Samridhi</a></h3>
+            <p>Social security benefits linkage for street vendors families</p>
+            <a href="svanidhi-samridhi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="swachh-bharat-urban.html">Swachh Bharat Mission Urban</a></h3>
+            <p>Toilet construction and solid waste management in towns</p>
+            <a href="swachh-bharat-urban.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="swachh-bharat.html">Swachh Bharat Mission Gramin</a></h3>
+            <p>Odf-plus village development and rural sanitation</p>
+            <a href="swachh-bharat.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="uidf.html">Urban Infrastructure Development Fund</a></h3>
+            <p>Financial support for tier-2 and tier-3 cities growth</p>
+            <a href="uidf.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="housing">
+            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
+            <h3><a href="urban-shelters.html">Deendayal Antyodaya Urban Shelters</a></h3>
+            <p>Establishment of permanent shelters for urban destitute</p>
+            <a href="urban-shelters.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="csis-edu-loan.html">Central Sector Interest Subsidy Scheme</a></h3>
+            <p>Interest waiver on student loans during study period</p>
+            <a href="csis-edu-loan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="girls-secondary-incentive.html">Incentive to Girls for Secondary Education</a></h3>
+            <p>Cash deposit incentive to promote girls enrollment in high schools</p>
+            <a href="girls-secondary-incentive.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="ishan-uday.html">Ishan Uday Scholarship</a></h3>
+            <p>Special scholarship scheme for North Eastern Region students</p>
+            <a href="ishan-uday.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="jan-shikshan-sansthan.html">Jan Shikshan Sansthan</a></h3>
+            <p>Vocational skill training for rural non-literate adults</p>
+            <a href="jan-shikshan-sansthan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="kaushal-acharya.html">Kaushal Acharya Awards</a></h3>
+            <p>Recognition of trainers under Skill India initiatives</p>
+            <a href="kaushal-acharya.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="kgbv-schools.html">Kasturba Gandhi Balika Vidyalaya</a></h3>
+            <p>Residential girls schools for weaker sections in backward blocks</p>
+            <a href="kgbv-schools.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="manas-scheme.html">MANAS Skill Development</a></h3>
+            <p>Skill upgradation for minority communities traditional crafts</p>
+            <a href="manas-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="means-merit-scholarship.html">National Means cum Merit Scholarship</a></h3>
+            <p>Scholarships for meritorious students of weaker sections</p>
+            <a href="means-merit-scholarship.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="nai-roshni.html">Nai Roshni Leadership Scheme</a></h3>
+            <p>Leadership development training program for minority women</p>
+            <a href="nai-roshni.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="national-apprenticeship.html">National Apprenticeship Promotion</a></h3>
+            <p>Financial stipend support for apprenticeship training</p>
+            <a href="national-apprenticeship.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="national-career-service.html">National Career Service Portal</a></h3>
+            <p>Job matching, career counseling, and vocational training portal</p>
+            <a href="national-career-service.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="national-overseas-scholarship.html">National Overseas Scholarship</a></h3>
+            <p>Financial aid for SC/ST students studying abroad</p>
+            <a href="national-overseas-scholarship.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="ndear.html">National Digital Education Architecture</a></h3>
+            <p>Unified digital blueprint for education systems in India</p>
+            <a href="ndear.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="neat-scheme.html">National Educational Alliance for Technology</a></h3>
+            <p>AI-based personalized learning solutions for students</p>
+            <a href="neat-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="nipun-bharat.html">NIPUN Bharat Mission</a></h3>
+            <p>Achieving foundational literacy and numeracy by grade 3</p>
+            <a href="nipun-bharat.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="padhna-likhna-abhiyan.html">Padhna Likhna Abhiyan</a></h3>
+            <p>Adult education and literacy program for non-literates</p>
+            <a href="padhna-likhna-abhiyan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pm-cares-children.html">PM CARES for Children</a></h3>
+            <p>Education and financial corpus support for COVID-19 orphans</p>
+            <a href="pm-cares-children.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pm-evidhya.html">PM eVIDYA Digital Education</a></h3>
+            <p>Multi-mode access to online education and digital channels</p>
+            <a href="pm-evidhya.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pm-kaushal-vikas.html">PM Kaushal Vikas Yojana</a></h3>
+            <p>Industry-relevant skill certification and job placement assistance</p>
+            <a href="pm-kaushal-vikas.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pm-poshan.html">PM POSHAN Mid Day Meal</a></h3>
+            <p>Hot cooked nutritious meals for government school students</p>
+            <a href="pm-poshan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pm-shri-schools.html">PM SHRI Schools</a></h3>
+            <p>Upgradation of schools into showcase green institutions</p>
+            <a href="pm-shri-schools.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pm-vidyalaxmi.html">PM Vidyalaxmi Education Loan</a></h3>
+            <p>Single window system for student loans and scholarships applications</p>
+            <a href="pm-vidyalaxmi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pmrf.html">PM Research Fellowship</a></h3>
+            <p>Direct fellowship for doctoral research in top tech institutes</p>
+            <a href="pmrf.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="pragati-scholarship.html">Pragati Scholarship for Girls</a></h3>
+            <p>Technical education scholarships for girl students</p>
+            <a href="pragati-scholarship.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="rusa.html">Rashtriya Uchchatar Shiksha Abhiyan</a></h3>
+            <p>Strategic funding to state higher education institutions</p>
+            <a href="rusa.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="saksham-scholarship.html">Saksham Scholarship for Disabled</a></h3>
+            <p>Support for differently-abled students pursuing professional degrees</p>
+            <a href="saksham-scholarship.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="samagra-shiksha.html">Samagra Shiksha Abhiyan</a></h3>
+            <p>Integrated school education support from pre-school to class 12</p>
+            <a href="samagra-shiksha.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="sankalp-skill.html">Skill Acquisition for Livelihood Promotion</a></h3>
+            <p>Decentralized district-level skill planning support</p>
+            <a href="sankalp-skill.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="shreyas-scheme.html">SHREAS Apprenticeship Scheme</a></h3>
+            <p>Industry apprenticeship opportunities for non-technical graduates</p>
+            <a href="shreyas-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="stars-project.html">STARS Education Project</a></h3>
+            <p>Strengthening teaching-learning outcomes in 6 states</p>
+            <a href="stars-project.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="swanath-scholarship.html">Swanath Scholarship Scheme</a></h3>
+            <p>Scholarship for orphans and children of deceased martyrs</p>
+            <a href="swanath-scholarship.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="swayam-portal.html">Swayam Online Courses</a></h3>
+            <p>Free online certification courses from top professors</p>
+            <a href="swayam-portal.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="swayam-prabha.html">Swayam Prabha DTH Channels</a></h3>
+            <p>24/7 educational television channels for school and college</p>
+            <a href="swayam-prabha.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="udaan-academy.html">Udaan Academy Scheme</a></h3>
+            <p>Special industry-focused skill training for Jammu & Kashmir youth</p>
+            <a href="udaan-academy.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="education">
+            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <span class="scheme-card-tag tag-education">Education & Skill Development</span>
+            <h3><a href="vidyanjali.html">Vidyanjali School Volunteer Initiative</a></h3>
+            <p>Community and volunteer involvement in government schools</p>
+            <a href="vidyanjali.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="balika-samriddhi.html">Balika Samriddhi Yojana</a></h3>
+            <p>Post-delivery grant and annual scholarship for girl child of BPL families</p>
+            <a href="balika-samriddhi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="beti-bachao.html">Beti Bachao Beti Padhao</a></h3>
+            <p>Social campaign to prevent female foeticide and educate girls</p>
+            <a href="beti-bachao.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="child-protection-services.html">Child Protection Services</a></h3>
+            <p>Institutional care and rehabilitation of vulnerable children</p>
+            <a href="child-protection-services.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="child-security.html">Integrated Child Security Scheme</a></h3>
+            <p>Emergency helpline and rescue services for children in distress</p>
+            <a href="child-security.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="dhanlakshmi-scheme.html">Dhanlakshmi Scheme</a></h3>
+            <p>Conditional cash transfers for girl child education and immunization</p>
+            <a href="dhanlakshmi-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="icds-scheme.html">Integrated Child Development Services</a></h3>
+            <p>Supplementary nutrition, immunization, and pre-school education at Anganwadis</p>
+            <a href="icds-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="kasturba-fund.html">Kasturba Gandhi National Memorial Fund</a></h3>
+            <p>Welfare grants for destitute women and widows in rural areas</p>
+            <a href="kasturba-fund.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="kishori-hygiene.html">Kishori Health and Hygiene</a></h3>
+            <p>Free sanitary napkins distribution through rural schools</p>
+            <a href="kishori-hygiene.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="kishori-shakti.html">Kishori Shakti Yojana</a></h3>
+            <p>Improvement of nutritional and health status of adolescent girls</p>
+            <a href="kishori-shakti.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="lakhpati-didi.html">Lakhpati Didi Self Help Groups</a></h3>
+            <p>Skill training to help SHG women earn 1 lakh annually</p>
+            <a href="lakhpati-didi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="mahila-coir-yojana.html">Mahila Coir Yojana</a></h3>
+            <p>Subsidized training and machinery for women in coir sector</p>
+            <a href="mahila-coir-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="mahila-police-volunteers.html">Mahila Police Volunteers</a></h3>
+            <p>Public-police interface to report violence and help women in need</p>
+            <a href="mahila-police-volunteers.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="mahila-shakti-kendra.html">Mahila Shakti Kendra</a></h3>
+            <p>Empowering rural women with skills, digital literacy, and rights</p>
+            <a href="mahila-shakti-kendra.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="maternity-benefit.html">PM Matru Vandana Yojana</a></h3>
+            <p>Maternity benefit cash assistance for pregnant women</p>
+            <a href="maternity-benefit.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="mission-shakti.html">Mission Shakti Women Safety</a></h3>
+            <p>Unified umbrella scheme for safety, security, and empowerment of women</p>
+            <a href="mission-shakti.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="nari-shakti-puraskar.html">Nari Shakti Puraskar</a></h3>
+            <p>National award celebrating exemplary achievements of women</p>
+            <a href="nari-shakti-puraskar.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="national-creche-scheme.html">National Creche Scheme</a></h3>
+            <p>Daycare facilities for children of working mothers in unorganized sector</p>
+            <a href="national-creche-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="nmwe.html">National Mission for Women Empowerment</a></h3>
+            <p>Inter-sectoral coordination for women policy and legal reforms</p>
+            <a href="nmwe.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="one-stop-centre.html">One Stop Centre Sakhi</a></h3>
+            <p>Support services for women affected by domestic violence</p>
+            <a href="one-stop-centre.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="pm-e-haat.html">PM E Haat Portal</a></h3>
+            <p>Online marketing platform for women entrepreneurs home goods</p>
+            <a href="pm-e-haat.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="pm-mahila-udyamita.html">PM Mahila Udyamita Scheme</a></h3>
+            <p>Low-interest collateral-free loans for women-led startups</p>
+            <a href="pm-mahila-udyamita.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="pmmsy-women.html">Pradhan Mantri Mahila Shakti</a></h3>
+            <p>Village level volunteer mobilization for women welfare</p>
+            <a href="pmmsy-women.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="poshan-abhiyaan.html">POSHAN Abhiyaan Nutrition</a></h3>
+            <p>National nutrition mission to reduce stunting and anemia</p>
+            <a href="poshan-abhiyaan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="rashtriya-mahila-kosh.html">Rashtriya Mahila Kosh</a></h3>
+            <p>Micro-credit loans for poor women setting up micro-enterprises</p>
+            <a href="rashtriya-mahila-kosh.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="sabla-scheme.html">SABLA Adolescent Girls Scheme</a></h3>
+            <p>Life skills and nutrition support for out-of-school girls</p>
+            <a href="sabla-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="samarthya-scheme.html">Samarthya Empowerment Scheme</a></h3>
+            <p>Creches, hostels, and livelihood skills training under Mission Shakti</p>
+            <a href="samarthya-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="sambal-scheme.html">Sambal Protection Scheme</a></h3>
+            <p>One-stop centers, helpline, and legal aid for women</p>
+            <a href="sambal-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="step-scheme.html">STEP Employment for Women</a></h3>
+            <p>Employability skill training for women in traditional sectors</p>
+            <a href="step-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="sukanya-samriddhi.html">Sukanya Samriddhi Yojana Account</a></h3>
+            <p>High-interest savings account for girl children</p>
+            <a href="sukanya-samriddhi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="swadhar-greh.html">Swadhar Greh Scheme</a></h3>
+            <p>Temporary shelter, food, and counseling for women in difficult circumstances</p>
+            <a href="swadhar-greh.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="swayamsiddha.html">Swayamsiddha Women Scheme</a></h3>
+            <p>Self-help group networks formation for holistic women empowerment</p>
+            <a href="swayamsiddha.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="ujjawala-trafficking.html">Ujjawala Prevention of Trafficking</a></h3>
+            <p>Prevention, rescue, and rehabilitation of victims of commercial sexual exploitation</p>
+            <a href="ujjawala-trafficking.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="ujjwala-yojana.html">PM Ujjwala Yojana Gas</a></h3>
+            <p>Free LPG connection and stove to BPL families</p>
+            <a href="ujjwala-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="women-helpline.html">Universal Women Helpline</a></h3>
+            <p>24-hour toll-free telecom service (181) for women distress</p>
+            <a href="women-helpline.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="women">
+            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <span class="scheme-card-tag tag-women">Women & Child Development</span>
+            <h3><a href="working-women-hostel.html">Working Women Hostel Scheme</a></h3>
+            <p>Safe and affordable lodging facilities in urban areas</p>
+            <a href="working-women-hostel.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="atal-pension.html">Atal Pension Yojana APY</a></h3>
+            <p>Guaranteed monthly pension of 1,000 to 5,000 for unorganized workers</p>
+            <a href="atal-pension.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="cgtmse-scheme.html">Credit Guarantee Fund CGTMSE</a></h3>
+            <p>Collateral-free credit guarantee for MSME loans up to 5 crore</p>
+            <a href="cgtmse-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="clcss-msme.html">Credit Linked Capital Subsidy CLCSS</a></h3>
+            <p>15 percent capital subsidy for technology upgradation of MSMEs</p>
+            <a href="clcss-msme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="credit-enhancement-sc.html">Credit Enhancement Guarantee SC</a></h3>
+            <p>Credit guarantee for SC entrepreneurs raising finance from banks</p>
+            <a href="credit-enhancement-sc.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="deen-dayal-antyodaya.html">DAY NRLM Rural Livelihoods</a></h3>
+            <p>Self-help group promotion and financial linkage for rural poor</p>
+            <a href="deen-dayal-antyodaya.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="digital-india.html">Digital India Campaign</a></h3>
+            <p>Digital infrastructure, e-services delivery, and digital literacy</p>
+            <a href="digital-india.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="e-shram.html">e Shram Portal Registration</a></h3>
+            <p>National database of unorganized workers for social security</p>
+            <a href="e-shram.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="epcg-scheme.html">Export Promotion Capital Goods</a></h3>
+            <p>Zero customs duty import of capital goods for export businesses</p>
+            <a href="epcg-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="interest-equalisation-scheme.html">Interest Subvention Export Credit</a></h3>
+            <p>Pre and post-shipment export credit interest rate rebate</p>
+            <a href="interest-equalisation-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="interest-subvention-msme.html">Interest Subvention Scheme for MSME</a></h3>
+            <p>2 percent interest rebate on working capital and term loans</p>
+            <a href="interest-subvention-msme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="jan-dhan.html">PM Jan Dhan Yojana Accounts</a></h3>
+            <p>Zero-balance bank accounts with debit card and insurance benefits</p>
+            <a href="jan-dhan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="make-in-india.html">Make in India Initiative</a></h3>
+            <p>Investment promotion and manufacturing ease of doing business</p>
+            <a href="make-in-india.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="msme-north-east.html">MSME Promotion in NE Region</a></h3>
+            <p>Infrastructure development and capacity building in North East</p>
+            <a href="msme-north-east.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="mudra-yojana.html">PM Mudra Yojana Loans</a></h3>
+            <p>Collateral-free business loans up to 10 lakh for small enterprises</p>
+            <a href="mudra-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="nbcfdc-loans.html">Backward Classes Finance Corporation</a></h3>
+            <p>Educational and business loans for Backward Classes categories</p>
+            <a href="nbcfdc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="ncs-jobs.html">National Career Service NCS</a></h3>
+            <p>Employment matching and skill updates online portal</p>
+            <a href="ncs-jobs.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="nhfdc-loans.html">Handicapped Finance Development Corporation</a></h3>
+            <p>Subsidized business and education loans for disabled citizens</p>
+            <a href="nhfdc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="nmdfc-loans.html">Minorities Development Finance Corporation</a></h3>
+            <p>Concessional loans for self-employment projects of minorities</p>
+            <a href="nmdfc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="nsfdc-loans.html">Scheduled Castes Finance Corporation</a></h3>
+            <p>Financial assistance and skill training for Scheduled Castes</p>
+            <a href="nsfdc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="nskfdc-loans.html">Safai Karamcharis Finance Corporation</a></h3>
+            <p>Low-interest business loans for sanitation workers</p>
+            <a href="nskfdc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="nstfdc-loans.html">Scheduled Tribes Finance Corporation</a></h3>
+            <p>Term loans and financial assistance for Scheduled Tribes micro-business</p>
+            <a href="nstfdc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pli-schemes.html">Production Linked Incentive PLI</a></h3>
+            <p>Financial incentives on incremental sales for manufacturing in 14 sectors</p>
+            <a href="pli-schemes.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pm-jeevan-jyoti.html">PM Jeevan Jyoti Bima</a></h3>
+            <p>Affordable life insurance cover of 2 lakh at 436 annual premium</p>
+            <a href="pm-jeevan-jyoti.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pm-laghu-vyapari.html">PM Laghu Vyapari Maan Dhan</a></h3>
+            <p>Pension scheme for shopkeepers, traders, and self-employed</p>
+            <a href="pm-laghu-vyapari.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pm-shram-yogi.html">PM Shram Yogi Maan Dhan</a></h3>
+            <p>Voluntary pension scheme for unorganized sector workers</p>
+            <a href="pm-shram-yogi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pm-suraksha-bima.html">PM Suraksha Bima Yojana</a></h3>
+            <p>Accidental death/disability insurance cover of 2 lakh at 20 annual</p>
+            <a href="pm-suraksha-bima.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pm-svanidhi.html">PM Street Vendor Loan SVANidhi</a></h3>
+            <p>Collateral-free micro working capital loans up to 50,000</p>
+            <a href="pm-svanidhi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pm-vishwakarma.html">PM Vishwakarma Artisans Support</a></h3>
+            <p>Training, tools vouchers, and low-interest loans for craftspeople</p>
+            <a href="pm-vishwakarma.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="pmegp.html">Prime Ministers Employment Programme</a></h3>
+            <p>Subsidies up to 35 percent for manufacturing and service businesses</p>
+            <a href="pmegp.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="scavengers-rehabilitation.html">Manual Scavengers Rehabilitation</a></h3>
+            <p>One-time cash assistance and alternate livelihood training</p>
+            <a href="scavengers-rehabilitation.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="sidbi-smiles.html">SIDBI Make in India Fund</a></h3>
+            <p>Soft loans and term loans for MSMEs meeting equity shortfalls</p>
+            <a href="sidbi-smiles.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="stand-up-india.html">Stand Up India Scheme</a></h3>
+            <p>Bank loans up to 1 crore for SC/ST and women greenfield startups</p>
+            <a href="stand-up-india.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="startup-india.html">Startup India Scheme</a></h3>
+            <p>Tax exemptions, seed funding, and patent filing support for startups</p>
+            <a href="startup-india.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="tufs-textile.html">Technology Upgradation Fund Textile</a></h3>
+            <p>Capital subsidy for modernization of textile units</p>
+            <a href="tufs-textile.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="finance">
+            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
+            <h3><a href="venture-capital-sc.html">Venture Capital Fund for SC</a></h3>
+            <p>Concessional capital loans for Scheduled Caste business owners</p>
+            <a href="venture-capital-sc.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="abry.html">Aatmanirbhar Bharat Rojgar Yojana</a></h3>
+            <p>Provident fund contribution subsidy for new employees hiring</p>
+            <a href="abry.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="agnipath.html">Agnipath Army Recruitment</a></h3>
+            <p>4-year military service opportunity with Seva Nidhi package</p>
+            <a href="agnipath.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="aspire-scheme.html">Scheme for Promotion of Innovation</a></h3>
+            <p>Setting up technology business incubators in rural areas</p>
+            <a href="aspire-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="coir-livelihood.html">Coir Board Livelihood Scheme</a></h3>
+            <p>Credit-linked subsidies for coir yarn and coir mats units</p>
+            <a href="coir-livelihood.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="coir-training-women.html">Mahila Coir training Scheme</a></h3>
+            <p>Stipendary training for rural women in coir yarn spinning</p>
+            <a href="coir-training-women.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="coir-udyami.html">Coir Udyami Yojana</a></h3>
+            <p>Credit linked subsidy scheme for coir processing units</p>
+            <a href="coir-udyami.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="day-nulm-sep.html">DAY NULM Self Employment loans</a></h3>
+            <p>Subsidized individual and group loans for urban micro-enterprises</p>
+            <a href="day-nulm-sep.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="day-nulm-skills.html">Deendayal Antyodaya Urban Skills</a></h3>
+            <p>Free employment training for urban poor in service sectors</p>
+            <a href="day-nulm-skills.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="ddu-gky.html">Deen Dayal Upadhyaya Grameen Kaushalya</a></h3>
+            <p>Placement-linked skill training for rural poor youth</p>
+            <a href="ddu-gky.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="eshram-portal.html">eShram Welfare Registration</a></h3>
+            <p>Accident cover and welfare linkage for unorganized workers</p>
+            <a href="eshram-portal.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="garib-kalyan-rojgar.html">Garib Kalyan Rojgar Abhiyaan</a></h3>
+            <p>Employment creation drive for returnee migrant workers in villages</p>
+            <a href="garib-kalyan-rojgar.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="gram-udyog-vikas.html">Gram Udyog Vikas Yojana</a></h3>
+            <p>Development of village industries including agarbatti and pottery</p>
+            <a href="gram-udyog-vikas.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="green-india-livelihoods.html">Green India Mission Livelihoods</a></h3>
+            <p>Income generation through community forestry and eco-restoration</p>
+            <a href="green-india-livelihoods.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="isds-textiles.html">Integrated Skill Development Scheme Textiles</a></h3>
+            <p>Upgrading skill levels of workers engaged in textile mills</p>
+            <a href="isds-textiles.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="khadi-vikas.html">Khadi Vikas Yojana</a></h3>
+            <p>Spinnery wage support and modernization of Khadi institutions</p>
+            <a href="khadi-vikas.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="make-in-india-mfg.html">Make in India Manufacturing</a></h3>
+            <p>FDI promotion and industrial corridors development</p>
+            <a href="make-in-india-mfg.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="mgnrega.html">MGNREGA Rural Employment</a></h3>
+            <p>Guaranteed 100 days of manual wage employment per rural household</p>
+            <a href="mgnrega.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="nats-scheme.html">National Apprenticeship Training NATS</a></h3>
+            <p>Technical apprenticeship training for engineering and diploma holders</p>
+            <a href="nats-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="ncs-disabled.html">National Career Service Centers for Disabled</a></h3>
+            <p>Vocational evaluation and rehabilitation services for handicapped</p>
+            <a href="ncs-disabled.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="ncs-jobseekers.html">National Career Service Job Seekers</a></h3>
+            <p>Registration, skill assessment, and employment counseling</p>
+            <a href="ncs-jobseekers.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="ncs-sc-st.html">National Career Service Centers for SC ST</a></h3>
+            <p>Free typing, computer, and coaching classes for SC/ST candidates</p>
+            <a href="ncs-sc-st.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="nrlm-shg.html">DAY NRLM SHG Linkage</a></h3>
+            <p>Revolving fund and bank linkages for women self-help groups</p>
+            <a href="nrlm-shg.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="pm-daksh.html">PM Daksh Yojana Training</a></h3>
+            <p>Skill development training for SC, OBC, and sanitation workers</p>
+            <a href="pm-daksh.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="pmegp-subsidies.html">PMEGP Business Subsidies</a></h3>
+            <p>Subsidy assistance for setting up new micro-enterprises</p>
+            <a href="pmegp-subsidies.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="retailers-pension.html">PM Retailers Pension Scheme</a></h3>
+            <p>Old age social security pension for small retail shopkeepers</p>
+            <a href="retailers-pension.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="rseti.html">RURAL Self Employment Training</a></h3>
+            <p>Free vocational training and bank loan linkage by lead banks</p>
+            <a href="rseti.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="sfurti-scheme.html">SFURTI Traditional Industries</a></h3>
+            <p>Cluster development for traditional industries and artisans</p>
+            <a href="sfurti-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="shram-yogi-pension.html">PM Shram Yogi Pension Scheme</a></h3>
+            <p>Pension of 3,000 per month for househelps, drivers, construction labor</p>
+            <a href="shram-yogi-pension.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="shrimev-jayate.html">Deendayal Upadhyaya Shramev Jayate</a></h3>
+            <p>Labor inspection reforms, portable UAN, and apprentice portals</p>
+            <a href="shrimev-jayate.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="smile-scheme.html">Support for Marginalised Individuals Livelihood</a></h3>
+            <p>Rehabilitation, shelter, and livelihood support for transgender/begging persons</p>
+            <a href="smile-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="sry-scavengers.html">Special Scheme for Rehabilitation of Scavengers</a></h3>
+            <p>Alternative employment loans and stipend for manual scavengers</p>
+            <a href="sry-scavengers.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="stand-up-greenfield.html">Stand Up India Greenfield Loan</a></h3>
+            <p>Capital funding for SC/ST and women setting up factories</p>
+            <a href="stand-up-greenfield.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="startup-seed-fund.html">Startup India Seed Fund</a></h3>
+            <p>Early stage funding support for validation and prototype creation</p>
+            <a href="startup-seed-fund.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="svanidhi-loan.html">PM SVANidhi Street Vendor Loan</a></h3>
+            <p>First-term loan of 10,000 with interest subvention support</p>
+            <a href="svanidhi-loan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="employment">
+            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
+            <h3><a href="weaver-mudra.html">Self Employment Scheme for Handloom Weavers</a></h3>
+            <p>Concessional loans and Mudra cards for traditional weavers</p>
+            <a href="weaver-mudra.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="annapurna-food-scheme.html">Annapurna Scheme Food Grains</a></h3>
+            <p>10 kg of free food grains monthly to eligible senior citizens</p>
+            <a href="annapurna-food-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="atal-pension-scheme.html">Atal Pension Yojana Accounts</a></h3>
+            <p>Guaranteed old-age pension for unorganized sector</p>
+            <a href="atal-pension-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="eps-95.html">Employees Pension Scheme EPS</a></h3>
+            <p>Pension benefits for EPFO-registered private sector employees</p>
+            <a href="eps-95.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="igndps.html">Indira Gandhi National Disability Pension</a></h3>
+            <p>Monthly pension of 300 to BPL severely disabled individuals</p>
+            <a href="igndps.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="ignoaps.html">Indira Gandhi National Old Age Pension</a></h3>
+            <p>Monthly pension of 200 to 500 for BPL elderly</p>
+            <a href="ignoaps.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="ignwps.html">Indira Gandhi National Widow Pension</a></h3>
+            <p>Monthly financial support of 300 to BPL widows aged 40-79</p>
+            <a href="ignwps.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="national-pension-system.html">National Pension System NPS</a></h3>
+            <p>Voluntary market-linked pension scheme managed by PFRDA</p>
+            <a href="national-pension-system.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="national-social-assistance.html">National Social Assistance Programme</a></h3>
+            <p>Pension to BPL elderly, widows, and disabled citizens</p>
+            <a href="national-social-assistance.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="nfbs.html">National Family Benefit Scheme</a></h3>
+            <p>One-time lump sum grant of 20,000 on death of BPL breadwinner</p>
+            <a href="nfbs.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="nps-swavalamban.html">Co Contribution Pension NPS Swavalamban</a></h3>
+            <p>Government co-contribution pension scheme for unorganized sector</p>
+            <a href="nps-swavalamban.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="pbby-insurance.html">Pravasi Bharatiya Bima Yojana</a></h3>
+            <p>Compulsory insurance cover for Indian emigrant workers abroad</p>
+            <a href="pbby-insurance.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="pm-kisan-maandhan-yojana.html">PM Kisan Pension Maandhan</a></h3>
+            <p>Pension of 3,000 for small farmers after age 60</p>
+            <a href="pm-kisan-maandhan-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="pm-shram-yogi-yojana.html">PM Shram Yogi Pension</a></h3>
+            <p>Old age social security pension for unorganized labor</p>
+            <a href="pm-shram-yogi-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="pmjjby.html">PM Jeevan Jyoti Insurance</a></h3>
+            <p>Life insurance cover of 2 lakh at 436 annual premium</p>
+            <a href="pmjjby.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="pmsby.html">PM Suraksha Bima Insurance</a></h3>
+            <p>Accident insurance cover of 2 lakh at 20 annual premium</p>
+            <a href="pmsby.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="pmvvy.html">Pradhan Mantri Vaya Vandana</a></h3>
+            <p>Investment-linked pension scheme for senior citizens offering 7.4 percent return</p>
+            <a href="pmvvy.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="postal-life-insurance.html">Postal Life Insurance Scheme</a></h3>
+            <p>Life insurance policy options for government and semi-government staff</p>
+            <a href="postal-life-insurance.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="rashtriya-vayoshri.html">Rashtriya Vayoshri Yojana Assistance</a></h3>
+            <p>Free physical aids and devices for BPL senior citizens</p>
+            <a href="rashtriya-vayoshri.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="senior-citizens-welfare.html">Senior Citizens Welfare Fund</a></h3>
+            <p>Utilization of unclaimed deposits for senior welfare projects</p>
+            <a href="senior-citizens-welfare.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="pension">
+            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
+            <h3><a href="varishtha-pension.html">Varishtha Pension Bima Yojana</a></h3>
+            <p>Guaranteed interest return pension scheme for senior citizens</p>
+            <a href="varishtha-pension.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="ddu-gram-jyoti.html">DDU Gram Jyoti Electricity</a></h3>
+            <p>Feeder separation and rural distribution grid strengthening</p>
+            <a href="ddu-gram-jyoti.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="ddu-nrlm.html">Deen Dayal Upadhyaya Rural Livelihood</a></h3>
+            <p>Rural self-employment training institutes credit support</p>
+            <a href="ddu-nrlm.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="drinking-water-program.html">National Rural Drinking Water Program</a></h3>
+            <p>Piped water supply systems creation in rural habitations</p>
+            <a href="drinking-water-program.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="jal-jeevan-mission.html">Jal Jeevan Mission Rural</a></h3>
+            <p>Tap water connections to all rural households by 2026</p>
+            <a href="jal-jeevan-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="mgnrega-wage.html">Mahatma Gandhi Rural Employment</a></h3>
+            <p>Wage employment for asset creation in rural communities</p>
+            <a href="mgnrega-wage.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="neeranchal-watershed.html">Neeranchal Watershed Development</a></h3>
+            <p>Hydrological and soil conservation support for dryland farms</p>
+            <a href="neeranchal-watershed.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="nrlm.html">National Rural Livelihoods Mission</a></h3>
+            <p>SHG networks and financial linkage for village women</p>
+            <a href="nrlm.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="pm-adarsh-gram.html">PM Adarsh Gram Yojana SC</a></h3>
+            <p>Development of villages with over 50 percent SC population</p>
+            <a href="pm-adarsh-gram.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="pm-gram-sadak.html">PM Gram Sadak Yojana Roads</a></h3>
+            <p>All-weather road connectivity to unconnected villages</p>
+            <a href="pm-gram-sadak.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="pura-scheme.html">Provision of Urban Amenities in Rural</a></h3>
+            <p>Public private partnerships for rural civic infrastructure</p>
+            <a href="pura-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="rurban-mission.html">Shama Prasad Mukherji Rurban Mission</a></h3>
+            <p>Urban-like facility clusters development in rural areas</p>
+            <a href="rurban-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="sansad-adarsh-gram.html">Sansad Adarsh Gram Yojana</a></h3>
+            <p>Model village development led by Members of Parliament</p>
+            <a href="sansad-adarsh-gram.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="saubhagya.html">Saubhagya Electricity Scheme</a></h3>
+            <p>Free electricity connection to willing rural households</p>
+            <a href="saubhagya.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="swachh-bharat-gramin.html">Swachh Bharat Gramin Toilet</a></h3>
+            <p>Subsidy of 12,000 for toilet construction in villages</p>
+            <a href="swachh-bharat-gramin.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="rural">
+            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <span class="scheme-card-tag tag-rural">Rural Development</span>
+            <h3><a href="swajal-yojana.html">Swajal Voluntary Water Scheme</a></h3>
+            <p>Community-led solar powered mini piped water supply</p>
+            <a href="swajal-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="biogas-development.html">National Biogas Development</a></h3>
+            <p>Subsidy for setting up biogas plants in rural homes</p>
+            <a href="biogas-development.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="ddugj-feeder.html">DDU Gram Jyoti Feeder</a></h3>
+            <p>Feeder segregation for agricultural and domestic power</p>
+            <a href="ddugj-feeder.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="fame-ev-scheme.html">FAME India Electric Vehicles</a></h3>
+            <p>Subsidy for purchasing electric vehicles and charging networks</p>
+            <a href="fame-ev-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="national-solar-mission.html">National Solar Mission Grid</a></h3>
+            <p>Grid-tied solar parks and large scale green energy generation</p>
+            <a href="national-solar-mission.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="pm-kusum.html">PM KUSUM Solar Pump</a></h3>
+            <p>60 percent subsidy for solar agricultural pumps for farmers</p>
+            <a href="pm-kusum.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="pm-surya-ghar-solar.html">PM Surya Ghar Muft Bijli Solar</a></h3>
+            <p>Subsidy for rooftop solar up to 300 units free power</p>
+            <a href="pm-surya-ghar-solar.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="saubhagya-power.html">Saubhagya Rural Power</a></h3>
+            <p>Household electrification and free LED bulb kits distribution</p>
+            <a href="saubhagya-power.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="slnp-streetlights.html">Street Lighting National Programme</a></h3>
+            <p>Replacement of conventional streetlights with smart LEDs</p>
+            <a href="slnp-streetlights.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="ujala-scheme.html">UJALA LED Bulb Scheme</a></h3>
+            <p>Subsidized energy-efficient LED bulbs and fan distribution</p>
+            <a href="ujala-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="energy">
+            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <span class="scheme-card-tag tag-energy">Energy & Power</span>
+            <h3><a href="wind-solar-hybrid.html">National Wind Solar Hybrid Policy</a></h3>
+            <p>Grid-tied hybrid green power generation projects support</p>
+            <a href="wind-solar-hybrid.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="amrut-infra.html">AMRUT Water Sanitation</a></h3>
+            <p>Sewerage, water supply, and drainage systems development</p>
+            <a href="amrut-infra.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="bharatmala-pariyojana.html">Bharatmala Pariyojana Highways</a></h3>
+            <p>Economic corridors and national highway network development</p>
+            <a href="bharatmala-pariyojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="border-infra.html">Border Infrastructure and Management</a></h3>
+            <p>Roads, fencing, and floodlighting on international borders</p>
+            <a href="border-infra.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="char-dham-highway.html">Char Dham Highway Project</a></h3>
+            <p>All-weather highway development linking 4 holy towns in Uttarakhand</p>
+            <a href="char-dham-highway.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="freight-corridor.html">Dedicated Freight Corridor Scheme</a></h3>
+            <p>Exclusive rail lines for fast cargo movement</p>
+            <a href="freight-corridor.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="gati-shakti.html">PM Gati Shakti National Master Plan</a></h3>
+            <p>Multimodal transport infrastructure planning portal</p>
+            <a href="gati-shakti.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="infra-pipeline.html">National Infrastructure Pipeline</a></h3>
+            <p>111 lakh crore infrastructure funding plan across sectors</p>
+            <a href="infra-pipeline.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="land-monetisation.html">National Land Monetisation Scheme</a></h3>
+            <p>Unlocking value from surplus government land assets</p>
+            <a href="land-monetisation.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="pm-devine.html">PM DevINE North East Development</a></h3>
+            <p>Infrastructure and livelihood funding in North Eastern states</p>
+            <a href="pm-devine.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="pmgsy-roads.html">PM Gram Sadak Rural Roads</a></h3>
+            <p>Rural road connectivity and upgrade funding for villages</p>
+            <a href="pmgsy-roads.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="sagarmala-project.html">Sagarmala Port Development</a></h3>
+            <p>Port modernization and port-led industrial development</p>
+            <a href="sagarmala-project.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="setu-bharatam.html">Setu Bharatam Highway Bridges</a></h3>
+            <p>Railway overbridges and underbridges construction on highways</p>
+            <a href="setu-bharatam.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="smart-cities-infra.html">Smart Cities Urban Mission</a></h3>
+            <p>Smart infrastructure and civic centers in 100 cities</p>
+            <a href="smart-cities-infra.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="udan-aviation.html">Ude Desh ka Aam Naagrik UDAN</a></h3>
+            <p>Subsidized regional air connectivity and airport revival</p>
+            <a href="udan-aviation.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="infrastructure">
+            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
+            <h3><a href="urja-ganga.html">Pradhan Mantri Urja Ganga</a></h3>
+            <p>Natural gas pipeline grid network development in Eastern India</p>
+            <a href="urja-ganga.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="accessible-india.html">Accessible India Campaign</a></h3>
+            <p>Barrier-free government buildings and transport for disabled</p>
+            <a href="accessible-india.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="adip-scheme.html">Assistance to Disabled Aids ADIP</a></h3>
+            <p>Aids and assistive devices distribution camps for disabled</p>
+            <a href="adip-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="ambedkar-overseas-subsidy.html">Dr Ambedkar Overseas Interest Subsidy</a></h3>
+            <p>Interest subsidy on study loans abroad for OBC/EBC students</p>
+            <a href="ambedkar-overseas-subsidy.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="atal-vayo-abhyuday.html">Atal Vayo Abhyuday Yojana</a></h3>
+            <p>Senior citizen homes and health clinics establishment grants</p>
+            <a href="atal-vayo-abhyuday.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="ddrs-disabled.html">Deendayal Disabled Rehabilitation</a></h3>
+            <p>Grants to NGOs for vocational schools of disabled children</p>
+            <a href="ddrs-disabled.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="fellowship-obc-students.html">National Fellowship for OBC Students</a></h3>
+            <p>Financial fellowship for OBC candidates doing research</p>
+            <a href="fellowship-obc-students.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="fellowship-sc-students.html">National Fellowship for SC Students</a></h3>
+            <p>Fellowship for pursuing M.Phil/Ph.D. in universities for SCs</p>
+            <a href="fellowship-sc-students.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="forest-dwellers-welfare.html">Sabuja Sangram Forest Welfare</a></h3>
+            <p>Livelihood and land rights support for scheduled tribes</p>
+            <a href="forest-dwellers-welfare.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="jagjivan-ram-hostels.html">Babu Jagjivan Ram Chhatrawas Yojana</a></h3>
+            <p>Funding for SC boys and girls student hostels construction</p>
+            <a href="jagjivan-ram-hostels.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="jiyo-parsi.html">Jiyo Parsi Population Stabilization</a></h3>
+            <p>Medical and health assistance for Parsi community preservation</p>
+            <a href="jiyo-parsi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="manual-scavengers.html">Self Employment Manual Scavengers</a></h3>
+            <p>One-time cash grant and alternate livelihood support</p>
+            <a href="manual-scavengers.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="minority-civil-support.html">Support to Minority Students Civil Exams</a></h3>
+            <p>Financial incentive for passing civil services prelims</p>
+            <a href="minority-civil-support.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="nai-manzil.html">Nai Manzil Skill training</a></h3>
+            <p>Skill training and bridge education for minority school dropouts</p>
+            <a href="nai-manzil.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="nasha-mukt-bharat.html">Nasha Mukt Bharat Abhiyaan</a></h3>
+            <p>Drug demand reduction and de-addiction awareness drive</p>
+            <a href="nasha-mukt-bharat.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="national-food-security.html">National Food Security Ration</a></h3>
+            <p>Subsidized ration supply through Fair Price Shops</p>
+            <a href="national-food-security.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="naya-savera.html">Naya Savera Coaching minorities</a></h3>
+            <p>Free coaching classes for competitive exams for minorities</p>
+            <a href="naya-savera.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="ndfdc-loans.html">National Divyangjan Finance Corporation</a></h3>
+            <p>Subsidized business loans for disabled entrepreneurs</p>
+            <a href="ndfdc-loans.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="one-nation-one-ration.html">One Nation One Ration Card ONORC</a></h3>
+            <p>Nationwide portability of ration card benefits</p>
+            <a href="one-nation-one-ration.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="padho-pardesh.html">Padho Pardesh Interest Subsidy</a></h3>
+            <p>Interest subsidy on education loans for minority students studying abroad</p>
+            <a href="padho-pardesh.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="pm-cares-orphan.html">PM cares orphan Support</a></h3>
+            <p>Orphaned children support, education and health insurance</p>
+            <a href="pm-cares-orphan.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="pm-daksh-yojana.html">PM Daksh Training Scheme</a></h3>
+            <p>Skill development training for SC/ST, OBC, and sanitation workers</p>
+            <a href="pm-daksh-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="pm-garib-kalyan-anna.html">PM Garib Kalyan Food</a></h3>
+            <p>5kg free food grains monthly to 80 crore poor citizens</p>
+            <a href="pm-garib-kalyan-anna.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="pm-vikas-minorities.html">Pradhan Mantri Virasat Ka Samvardhan</a></h3>
+            <p>Livelihood and craft skills training for minorities</p>
+            <a href="pm-vikas-minorities.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="pm-yasasvi.html">Pradhan Mantri Young Achievers Scholarship</a></h3>
+            <p>Top class school scholarship for OBC and EBC students</p>
+            <a href="pm-yasasvi.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="ran-medical-aid.html">Rashtriya Arogya Nidhi Aid</a></h3>
+            <p>Financial assistance for medical emergency procedures</p>
+            <a href="ran-medical-aid.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="rashtriya-vayoshri-yojana.html">Rashtriya Vayoshri Senior Aids</a></h3>
+            <p>Free physical aids and wheelchairs for BPL elderly</p>
+            <a href="rashtriya-vayoshri-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="sage-scheme.html">Senior Care Ageing Growth Engine</a></h3>
+            <p>Funding for startups developing elderly care products</p>
+            <a href="sage-scheme.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="seekho-aur-kamao.html">Seekho aur Kamao Skill learning</a></h3>
+            <p>Placement-linked skill training for minority youth</p>
+            <a href="seekho-aur-kamao.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="smile-livelihoods.html">SMILE Transgender Rehabilitation</a></h3>
+            <p>Livelihood and medical support for transgenders and beggars</p>
+            <a href="smile-livelihoods.html" class="card-link">Read Full Guide →</a>
+          </article>
+          <article class="scheme-card" data-category="social">
+            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
+            <h3><a href="van-dhan-yojana.html">PM Van Dhan Vikas Kendra</a></h3>
+            <p>Minor forest produce marketing clusters for tribal gatherers</p>
+            <a href="van-dhan-yojana.html" class="card-link">Read Full Guide →</a>
+          </article>
+          </div>
+        </div>
+        <!-- SCHEMES_RESULTS_END -->
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+      <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <span class="logo-text">🏛️ Yojana<span style="color: var(--accent-orange);">Guide</span></span>
+          <p>Your trusted source for comprehensive information about Indian government schemes.</p>
+          <div class="social-links">
+            <a href="about.html" class="social-link" aria-label="About Us">ℹ️</a>
+            <a href="contact.html" class="social-link" aria-label="Contact">✉️</a>
+            <a href="categories.html" class="social-link" aria-label="Categories">📂</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Popular Schemes</h4>
+          <ul class="footer-links">
+            <li><a href="pm-kisan.html">PM Kisan Samman Nidhi</a></li>
+            <li><a href="ayushman-bharat.html">Ayushman Bharat PM JAY</a></li>
+            <li><a href="ujjwala-yojana.html">PM Ujjwala Yojana Gas</a></li>
+            <li><a href="pm-awas.html">PM Awas Yojana Rural</a></li>
+            <li><a href="sukanya-samriddhi.html">Sukanya Samriddhi Yojana Account</a></li>
+            <li><a href="mudra-yojana.html">PM Mudra Yojana Loans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="categories.html">Agriculture</a></li>
+            <li><a href="categories.html">Health</a></li>
+            <li><a href="categories.html">Housing</a></li>
+            <li><a href="categories.html">Education</a></li>
+            <li><a href="categories.html">Women &amp; Child</a></li>
+            <li><a href="categories.html">Financial Inclusion</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Important Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Yojana Guide. All rights reserved.</p>
+        <p><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
