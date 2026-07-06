@@ -23,7 +23,7 @@
         <span class="logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L1 7v2h22V7L12 2zm9 8H3v10h3V10h3v10h2V10h2v10h3V10h2v10h3V10zm1 11H2v2h20v-2z"/></svg></span>
         <span class="logo-text">Yojana<span>Guide</span></span>
       </a>
-                                                                                                                                          <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                                                                                                                                                <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
           <li><a href="index.html" class="">Home</a></li>
           <li><a href="categories.html" class="">Categories</a></li>
@@ -110,6 +110,15 @@
             <li><strong>Free Access:</strong> All information on Yojana Guide is completely free. We believe access to government scheme information should not be behind any paywall or require any subscription.</li>
           </ul>
 
+          <h2>Accessibility &amp; Inclusive Design</h2>
+          <p>We believe that access to government scheme information should be inclusive and barrier-free for everyone, including individuals with visual, auditory, motor, or cognitive disabilities. Yojana Guide is built with web accessibility as a core design principle:</p>
+          <ul>
+            <li><strong>Screen Reader Friendly:</strong> We use semantic HTML5 elements (like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>) and ARIA landmarks to allow easy screen reader navigation.</li>
+            <li><strong>Keyboard Navigation:</strong> All interactive elements, including dropdowns and search bars, can be fully accessed and operated using a standard keyboard.</li>
+            <li><strong>Alt Text for Visuals:</strong> All informative images, vectors, and icons include descriptive alternative text (alt attributes) or aria-hidden flags where decorative.</li>
+            <li><strong>High Contrast &amp; Scalability:</strong> Our theme features a high-contrast color scheme that meets WCAG accessibility guidelines, and text size can be scaled easily using browser zoom.</li>
+          </ul>
+
           <h2>Our Values</h2>
           <p>We are guided by core values that shape everything we do:</p>
           <ul>
@@ -130,7 +139,10 @@
         <p class="section-subtitle">Managing and reviewing government scheme information for Indian citizens</p>
         <div class="team-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
           <div class="team-card" style="text-align: center; padding: 2rem;">
-            <div class="team-avatar" aria-hidden="true" style="margin: 0 auto 1.25rem; width: 60px; height: 60px; font-size: 1.4rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: var(--white); font-weight: bold;">DS</div>
+            <div class="team-avatar-container" style="position: relative; margin: 0 auto 1.25rem; width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid var(--accent-orange); box-shadow: var(--shadow-md); display: flex; align-items: center; justify-content: center; background: var(--off-white);">
+              <img src="profile.png" alt="Durga Sravan Challagolla" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="team-avatar-fallback" style="width: 100%; height: 100%; font-size: 1.4rem; display: none; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: var(--white); font-weight: bold;">DS</div>
+            </div>
             <h4 style="font-size: 1.25rem; margin-bottom: 0.25rem; color: var(--navy);">Durga Sravan Challagolla</h4>
             <span class="role" style="font-size: 0.85rem; color: var(--accent-orange); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 1rem;">Founder, Owner &amp; Editor</span>
             <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">Policy analyst and digital welfare systems specialist. Dedicated to making government welfare scheme information clear, verified, and accessible to every Indian citizen.</p>
@@ -188,7 +200,7 @@
   </main>
 
   <!-- Footer -->
-                                                                                        <footer class="site-footer" role="contentinfo">
+                                                                                            <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
