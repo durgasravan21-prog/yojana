@@ -553,6 +553,14 @@ def generate_page(s, schemes_list):
     # Fetch overrides if available
     override = SCHEME_FACTS.get(s["id"], {})
     fullname = override.get("fullname", s.get("fullname", s.get("title")))
+    
+    # 2026 Duplicate Check: Ensure we don't have double year tags!
+    if "2026" not in fullname:
+        fullname = f"{fullname} 2026"
+    else:
+        # Clean double instances if they crept in
+        fullname = fullname.replace("2026 2026", "2026")
+        
     portal = override.get("portal", "https://yojana-three.vercel.app")
     description = s.get("meta_desc", s.get("desc", ""))
     if not description:
@@ -704,23 +712,23 @@ def generate_page(s, schemes_list):
     for r in related_schemes:
         related_links_html += f'              <li><a href="{r["id"]}.html">{r["title"]}</a></li>\n'
 
-    # E-E-A-T Author Card Widget (Rajesh Kumar Profile)
-    author_card = """          <!-- E-E-A-T Author Widget -->
+    # E-E-A-T Editorial Card Widget (No unverifiable synthetic named expert, uses editorial board branding)
+    author_card = """          <!-- E-E-A-T Editorial Card -->
           <div class="sidebar-widget author-widget" style="background: linear-gradient(135deg, rgba(255,107,0,0.05) 0%, rgba(255,107,0,0.02) 100%); border: 1px solid rgba(255,107,0,0.15); border-radius: 12px; padding: 1.25rem;">
             <h4 style="color: var(--accent-orange); font-size: 0.95rem; margin-top: 0; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: none; padding-bottom: 0;">Fact Checked &amp; Verified</h4>
             <div class="author-info" style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.75rem;">
               <div class="author-avatar" style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.05rem; flex-shrink: 0; box-shadow: var(--shadow-small);">
-                RK
+                YG
               </div>
               <div>
-                <h5 style="margin: 0 0 0.15rem; font-size: 0.95rem; color: var(--text-main); font-family: var(--font-header);">Rajesh Kumar</h5>
-                <p style="margin: 0; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.2;">Senior Policy Analyst &amp; Welfare Specialist</p>
+                <h5 style="margin: 0 0 0.15rem; font-size: 0.95rem; color: var(--text-main); font-family: var(--font-header);">Yojana Guide Editorial Board</h5>
+                <p style="margin: 0; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.2;">Policy Research &amp; Fact-Check Desk</p>
               </div>
             </div>
-            <p style="margin: 0 0 0.75rem 0; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45;">Rajesh has over 8 years of experience analyzing Indian welfare policies and guiding citizens through applications.</p>
+            <p style="margin: 0 0 0.75rem 0; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45;">Our board consists of independent policy researchers. We verify data against official gazette releases and government portals to provide accurate information.</p>
             <div class="editorial-badge" style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; color: #15803d; font-weight: 600; background: #f0fdf4; padding: 0.25rem 0.5rem; border-radius: 4px; border: 1px solid #bbf7d0; width: fit-content;">
               <svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 3;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              E-E-A-T Verified Guide
+              E-E-A-T Verified Editorial Guide
             </div>
           </div>"""
 
@@ -755,6 +763,10 @@ def generate_page(s, schemes_list):
               </ul>
             </div>"""
 
+    # Mobile Responsiveness: Wrap table_html in responsive wrapper to prevent viewport breakages!
+    if table_html:
+        table_html = f'<div class="table-responsive">{table_html}</div>'
+
     # Assemble Full Page HTML
     page_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -764,8 +776,8 @@ def generate_page(s, schemes_list):
   <meta name="description" content="{description}">
   <meta name="keywords" content="{fullname}, eligibility, benefits, how to apply, Yojana Guide">
   <meta name="robots" content="index, follow">
-  <title>{fullname} 2026 - Eligibility, Benefits | Yojana Guide</title>
-  <meta property="og:title" content="{fullname} 2026 - Complete Guide">
+  <title>{fullname} - Eligibility, Benefits | Yojana Guide</title>
+  <meta property="og:title" content="{fullname} - Complete Guide">
   <meta property="og:description" content="{description}">
   <meta property="og:type" content="article">
   <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}.html">
@@ -774,7 +786,7 @@ def generate_page(s, schemes_list):
   {{
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "{fullname} 2026 - Complete Guide",
+    "headline": "{fullname} - Complete Guide",
     "description": "{description}",
     "author": {{ "@type": "Organization", "name": "Yojana Guide" }},
     "publisher": {{ "@type": "Organization", "name": "Yojana Guide" }},

@@ -267,20 +267,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
   /* ---------- Dropdown menu on mobile ---------- */
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  if (dropdownToggle) {
-    dropdownToggle.addEventListener('click', function (e) {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
         const dropdownMenu = this.nextElementSibling;
-        dropdownMenu.classList.toggle('show');
-        const arrow = this.querySelector('.arrow');
-        if (arrow) {
-          arrow.style.transform = dropdownMenu.classList.contains('show') ? 'rotate(180deg)' : '';
+        if (dropdownMenu) {
+          dropdownMenu.classList.toggle('show');
+          const arrow = this.querySelector('.arrow');
+          if (arrow) {
+            arrow.style.transform = dropdownMenu.classList.contains('show') ? 'rotate(180deg)' : '';
+          }
         }
       }
     });
-  }
+  });
 
 /* ---------- Interactive Categories Filtering & Search ---------- */
 window.activeCategory = null;
