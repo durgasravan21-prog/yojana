@@ -238,6 +238,7 @@ def update_all_files():
         
         # Replace other URL instances dynamically
         content = content.replace("https://yojana-three.vercel.app", "https://www.yojanaguide.in")
+        content = content.replace("yojana-three.vercel.app", "yojanaguide.in")
         
         # 3. Update Category lists in categories.html
         if filename == "categories.html":

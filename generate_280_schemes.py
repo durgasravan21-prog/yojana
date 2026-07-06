@@ -589,7 +589,7 @@ def generate_single_scheme_html(s, popular_schemes):
   <meta property="og:title" content="{s["title"]} 2026 - Complete Guide">
   <meta property="og:description" content="{s["description"]}">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}.html">
+  <link rel="canonical" href="https://www.yojanaguide.in/{s["id"]}.html">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {{
@@ -601,7 +601,7 @@ def generate_single_scheme_html(s, popular_schemes):
     "publisher": {{ "@type": "Organization", "name": "Yojana Guide" }},
     "datePublished": "2026-03-15",
     "dateModified": "2026-07-06",
-    "mainEntityOfPage": "https://yojana-three.vercel.app/{s["id"]}.html"
+    "mainEntityOfPage": "https://www.yojanaguide.in/{s["id"]}.html"
   }}
   </script>
 </head>
