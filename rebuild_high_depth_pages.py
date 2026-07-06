@@ -710,7 +710,7 @@ def generate_page(s, schemes_list):
     related_schemes = [x for x in schemes_list if x["category"] == cat_id and x["id"] != s["id"]][:2]
     related_links_html = ""
     for r in related_schemes:
-        related_links_html += f'              <li><a href="{r["id"]}.html">{r["title"]}</a></li>\n'
+        related_links_html += f'              <li><a href="{r["id"]}">{r["title"]}</a></li>\n'
 
     # E-E-A-T Editorial Card Widget (No unverifiable synthetic named expert, uses editorial board branding)
     author_card = """          <!-- E-E-A-T Author Card -->
@@ -788,7 +788,7 @@ def generate_page(s, schemes_list):
   <meta property="og:title" content="{fullname} - Complete Guide">
   <meta property="og:description" content="{description}">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}.html">
+  <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {{
@@ -800,7 +800,7 @@ def generate_page(s, schemes_list):
     "publisher": {{ "@type": "Organization", "name": "Yojana Guide" }},
     "datePublished": "2026-03-15",
     "dateModified": "2026-07-06",
-    "mainEntityOfPage": "https://yojana-three.vercel.app/{s["id"]}.html"
+    "mainEntityOfPage": "https://yojana-three.vercel.app/{s["id"]}"
   }}
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7490572944753317" crossorigin="anonymous"></script>
@@ -809,7 +809,7 @@ def generate_page(s, schemes_list):
   <div class="reading-progress" aria-hidden="true"></div>
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="index.html" class="site-logo" aria-label="Yojana Guide Home">
+      <a href="/" class="site-logo" aria-label="Yojana Guide Home">
         <span class="logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="logo-svg" style="display:inline-block;vertical-align:middle;margin-right:8px;width:24px;height:24px;fill:currentColor;"><path d="M12 2L1 7v2h22V7L12 2zm9 8H3v10h3V10h3v10h2V10h2v10h3V10h2v10h3V10zm1 11H2v2h20v-2z"/></svg></span>
         <span class="logo-text">Yojana<span>Guide</span></span>
       </a>
@@ -824,9 +824,9 @@ def generate_page(s, schemes_list):
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumb-list">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li class="breadcrumb-separator" aria-hidden="true">›</li>
-        <li><a href="categories.html">{cat_info["name"]}</a></li>
+        <li><a href="categories">{cat_info["name"]}</a></li>
         <li class="breadcrumb-separator" aria-hidden="true">›</li>
         <li class="current" aria-current="page">{s["title"]}</li>
       </ol>

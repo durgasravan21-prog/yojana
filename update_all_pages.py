@@ -113,19 +113,19 @@ def parse_all_schemes():
 def get_navigation(active_page="index", popular_schemes=[]):
     dropdown_items_html = ""
     for s in popular_schemes[:12]:
-        dropdown_items_html += f'              <li><a href="{s["id"]}.html">{s["title"]}</a></li>\n'
+        dropdown_items_html += f'              <li><a href="{s["id"]}">{s["title"]}</a></li>\n'
         
     nav_html = f"""      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
-          <li><a href="index.html" class="{"active" if active_page == "index" else ""}">Home</a></li>
-          <li><a href="categories.html" class="{"active" if active_page == "categories" else ""}">Categories</a></li>
+          <li><a href="/" class="{"active" if active_page == "index" else ""}">Home</a></li>
+          <li><a href="categories" class="{"active" if active_page == "categories" else ""}">Categories</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Popular Schemes <span class="arrow">▼</span></a>
             <ul class="dropdown-menu">
 {dropdown_items_html}            </ul>
           </li>
-          <li><a href="about.html" class="{"active" if active_page == "about" else ""}">About</a></li>
-          <li><a href="contact.html" class="{"active" if active_page == "contact" else ""}">Contact</a></li>
+          <li><a href="about" class="{"active" if active_page == "about" else ""}">About</a></li>
+          <li><a href="contact" class="{"active" if active_page == "contact" else ""}">Contact</a></li>
         </ul>
       </nav>"""
     return nav_html
@@ -133,7 +133,7 @@ def get_navigation(active_page="index", popular_schemes=[]):
 def get_footer(popular_schemes=[]):
     popular_links = ""
     for s in popular_schemes[:6]:
-        popular_links += f'            <li><a href="{s["id"]}.html">{s["title"]}</a></li>\n'
+        popular_links += f'            <li><a href="{s["id"]}">{s["title"]}</a></li>\n'
         
     footer_html = f"""    <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -142,9 +142,9 @@ def get_footer(popular_schemes=[]):
           <span class="logo-text"><svg viewBox="0 0 24 24" class="logo-svg" style="display:inline-block;vertical-align:middle;margin-right:8px;width:24px;height:24px;fill:currentColor;"><path d="M12 2L1 7v2h22V7L12 2zm9 8H3v10h3V10h3v10h2V10h2v10h3V10h2v10h3V10zm1 11H2v2h20v-2z"/></svg>Yojana<span style="color: var(--accent-orange);">Guide</span></span>
           <p>Your trusted source for comprehensive information about Indian government schemes.</p>
           <div class="social-links">
-            <a href="about.html" class="social-link" aria-label="About Us"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>
-            <a href="contact.html" class="social-link" aria-label="Contact"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-            <a href="categories.html" class="social-link" aria-label="Categories"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></a>
+            <a href="about" class="social-link" aria-label="About Us"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>
+            <a href="contact" class="social-link" aria-label="Contact"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            <a href="categories" class="social-link" aria-label="Categories"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></a>
           </div>
         </div>
         </div>
@@ -156,28 +156,28 @@ def get_footer(popular_schemes=[]):
         <div>
           <h4 class="footer-heading">Categories</h4>
           <ul class="footer-links">
-            <li><a href="categories.html">Agriculture</a></li>
-            <li><a href="categories.html">Health</a></li>
-            <li><a href="categories.html">Housing</a></li>
-            <li><a href="categories.html">Education</a></li>
-            <li><a href="categories.html">Women &amp; Child</a></li>
-            <li><a href="categories.html">Financial Inclusion</a></li>
+            <li><a href="categories">Agriculture</a></li>
+            <li><a href="categories">Health</a></li>
+            <li><a href="categories">Housing</a></li>
+            <li><a href="categories">Education</a></li>
+            <li><a href="categories">Women &amp; Child</a></li>
+            <li><a href="categories">Financial Inclusion</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-heading">Important Links</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="contact">Contact Us</a></li>
+            <li><a href="privacy-policy">Privacy Policy</a></li>
+            <li><a href="disclaimer">Disclaimer</a></li>
+            <li><a href="terms">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Yojana Guide. All rights reserved.</p>
-        <p><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="disclaimer.html">Disclaimer</a></p>
+        <p><a href="privacy-policy">Privacy</a> · <a href="terms">Terms</a> · <a href="disclaimer">Disclaimer</a></p>
       </div>
     </div>
   </footer>"""
@@ -224,6 +224,18 @@ def update_all_files():
         # 2. Update Footer
         content = re.sub(r'<footer class="site-footer" role="contentinfo">.*?</footer>', get_footer(popular_schemes), content, flags=re.DOTALL)
         
+        # 2.3 Clean Canonical URL in <head>
+        if filename == 'index.html':
+            expected_canonical = "https://yojana-three.vercel.app/"
+        else:
+            expected_canonical = f"https://yojana-three.vercel.app/{filename.replace('.html', '')}"
+            
+        content = re.sub(
+            r'<link\s+rel="canonical"\s+href="[^"]+"',
+            f'<link rel="canonical" href="{expected_canonical}"',
+            content
+        )
+        
         # 3. Update Category lists in categories.html
         if filename == "categories.html":
             categories_html_replacement = ""
@@ -269,9 +281,9 @@ def update_all_files():
                     all_schemes_cards_html += f"""          <article class="scheme-card" data-category="{cat_id}">
             <div class="scheme-card-icon {cat_info["color"]}" aria-hidden="true">{s["emoji"]}</div>
             <span class="scheme-card-tag {cat_info["class"]}">{cat_info["name"]}</span>
-            <h3><a href="{s["id"]}.html">{s["title"]}</a></h3>
+            <h3><a href="{s["id"]}">{s["title"]}</a></h3>
             <p>{s["description"]}</p>
-            <a href="{s["id"]}.html" class="card-link">Read Full Guide →</a>
+            <a href="{s["id"]}" class="card-link">Read Full Guide →</a>
           </article>\n"""
             
             # Replace categories grid
@@ -301,9 +313,9 @@ def update_all_files():
                 schemes_cards_html += f"""          <article class="scheme-card">
             <div class="scheme-card-icon {cat_info["color"]}" aria-hidden="true">{s["emoji"]}</div>
             <span class="scheme-card-tag {cat_info["class"]}">{cat_info["name"]}</span>
-            <h3><a href="{s["id"]}.html">{s["title"]}</a></h3>
+            <h3><a href="{s["id"]}">{s["title"]}</a></h3>
             <p>{s["description"]}</p>
-            <a href="{s["id"]}.html" class="card-link">Read Full Guide →</a>
+            <a href="{s["id"]}" class="card-link">Read Full Guide →</a>
           </article>\n"""
             
             # Update schemes grid using comment markers
@@ -312,7 +324,7 @@ def update_all_files():
             # Categories grid
             cat_list_html = ""
             for cat_id, cat_info in CATEGORIES.items():
-                cat_list_html += f"""          <a href="categories.html" class="category-card" aria-label="Browse {cat_info["name"]} schemes">
+                cat_list_html += f"""          <a href="categories" class="category-card" aria-label="Browse {cat_info["name"]} schemes">
             <span class="category-icon" aria-hidden="true">{cat_info["emoji"]}</span>
             <div class="category-info">
               <h3>{cat_info["name"]}</h3>
@@ -336,42 +348,42 @@ def update_all_files():
             
             updates_html = f"""          <article class="update-item">
             <div class="update-date">
-              <span class="day">{day1}</span>
-              <span class="month">{mon1}</span>
+               <span class="day">{day1}</span>
+               <span class="month">{mon1}</span>
             </div>
             <div class="update-content">
-              <h4><a href="pm-kisan.html">PM Kisan Beneficiary Status Guide</a></h4>
-              <p>Step-by-step instructions updated for verifying your name in the beneficiary list online.</p>
+               <h4><a href="pm-kisan">PM Kisan Beneficiary Status Guide</a></h4>
+               <p>Step-by-step instructions updated for verifying your name in the beneficiary list online.</p>
             </div>
           </article>
           <article class="update-item">
             <div class="update-date">
-              <span class="day">{day2}</span>
-              <span class="month">{mon2}</span>
+               <span class="day">{day2}</span>
+               <span class="month">{mon2}</span>
             </div>
             <div class="update-content">
-              <h4><a href="ayushman-bharat.html">Ayushman Card e-KYC Update</a></h4>
-              <p>The online self-verification portal has updated enrollment guidelines for active health cards.</p>
+               <h4><a href="ayushman-bharat">Ayushman Card e-KYC Update</a></h4>
+               <p>The online self-verification portal has updated enrollment guidelines for active health cards.</p>
             </div>
           </article>
           <article class="update-item">
             <div class="update-date">
-              <span class="day">{day3}</span>
-              <span class="month">{mon3}</span>
+               <span class="day">{day3}</span>
+               <span class="month">{mon3}</span>
             </div>
             <div class="update-content">
-              <h4><a href="pm-surya-ghar.html">PM Surya Ghar Calculator Live</a></h4>
-              <p>Dynamic subsidy calculations and registration steps updated for solar rooftop installations.</p>
+               <h4><a href="pm-surya-ghar">PM Surya Ghar Calculator Live</a></h4>
+               <p>Dynamic subsidy calculations and registration steps updated for solar rooftop installations.</p>
             </div>
           </article>
           <article class="update-item">
             <div class="update-date">
-              <span class="day">{day4}</span>
-              <span class="month">{mon4}</span>
+               <span class="day">{day4}</span>
+               <span class="month">{mon4}</span>
             </div>
             <div class="update-content">
-              <h4><a href="lakhpati-didi.html">Lakhpati Didi Training Rules</a></h4>
-              <p>Updated application guidelines for self-help group members to access vocational training incentives.</p>
+               <h4><a href="lakhpati-didi">Lakhpati Didi Training Rules</a></h4>
+               <p>Updated application guidelines for self-help group members to access vocational training incentives.</p>
             </div>
           </article>\n"""
           
@@ -390,17 +402,23 @@ def generate_sitemap(schemes):
 """
     # General files
     for gf in GENERAL_PAGES:
+        clean_gf = gf.replace('.html', '')
+        if clean_gf == 'index':
+            loc = "https://yojana-three.vercel.app/"
+        else:
+            loc = f"https://yojana-three.vercel.app/{clean_gf}"
+            
         sitemap_content += f"""  <url>
-    <loc>https://yojana-three.vercel.app/{gf}</loc>
+    <loc>{loc}</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>{"1.0" if gf == "index.html" else "0.8"}</priority>
+    <priority>{"1.0" if clean_gf == "index" else "0.8"}</priority>
   </url>\n"""
   
     # Schemes
     for s in schemes:
         sitemap_content += f"""  <url>
-    <loc>https://yojana-three.vercel.app/{s["id"]}.html</loc>
+    <loc>https://yojana-three.vercel.app/{s["id"]}</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
