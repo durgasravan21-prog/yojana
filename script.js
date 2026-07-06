@@ -405,4 +405,25 @@ document.addEventListener('DOMContentLoaded', function() {
       window.filterSchemes();
     });
   }
+
+  // Handle auto-filtering by category on page load if query param or hash exists
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat') || window.location.hash.substring(1);
+  if (cat) {
+    const cards = document.querySelectorAll('.category-full-card');
+    let catName = cat.charAt(0).toUpperCase() + cat.slice(1);
+    for (const card of cards) {
+      const onclickAttr = card.getAttribute('onclick');
+      if (onclickAttr && onclickAttr.includes(`'${cat}'`)) {
+        const matches = onclickAttr.match(/'([^']+)'\s*,\s*'([^']+)'/);
+        if (matches && matches[2]) {
+          catName = matches[2];
+          break;
+        }
+      }
+    }
+    setTimeout(() => {
+      window.filterByCategory(cat, catName);
+    }, 50);
+  }
 });

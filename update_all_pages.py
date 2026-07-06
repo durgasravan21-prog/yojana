@@ -226,15 +226,18 @@ def update_all_files():
         
         # 2.3 Clean Canonical URL in <head>
         if filename == 'index.html':
-            expected_canonical = "https://yojana-three.vercel.app/"
+            expected_canonical = "https://www.yojanaguide.in/"
         else:
-            expected_canonical = f"https://yojana-three.vercel.app/{filename.replace('.html', '')}"
+            expected_canonical = f"https://www.yojanaguide.in/{filename.replace('.html', '')}"
             
         content = re.sub(
             r'<link\s+rel="canonical"\s+href="[^"]+"',
             f'<link rel="canonical" href="{expected_canonical}"',
             content
         )
+        
+        # Replace other URL instances dynamically
+        content = content.replace("https://yojana-three.vercel.app", "https://www.yojanaguide.in")
         
         # 3. Update Category lists in categories.html
         if filename == "categories.html":
@@ -324,7 +327,7 @@ def update_all_files():
             # Categories grid
             cat_list_html = ""
             for cat_id, cat_info in CATEGORIES.items():
-                cat_list_html += f"""          <a href="categories" class="category-card" aria-label="Browse {cat_info["name"]} schemes">
+                cat_list_html += f"""          <a href="categories?cat={cat_id}" class="category-card" aria-label="Browse {cat_info["name"]} schemes">
             <span class="category-icon" aria-hidden="true">{cat_info["emoji"]}</span>
             <div class="category-info">
               <h3>{cat_info["name"]}</h3>
@@ -404,9 +407,9 @@ def generate_sitemap(schemes):
     for gf in GENERAL_PAGES:
         clean_gf = gf.replace('.html', '')
         if clean_gf == 'index':
-            loc = "https://yojana-three.vercel.app/"
+            loc = "https://www.yojanaguide.in/"
         else:
-            loc = f"https://yojana-three.vercel.app/{clean_gf}"
+            loc = f"https://www.yojanaguide.in/{clean_gf}"
             
         sitemap_content += f"""  <url>
     <loc>{loc}</loc>
@@ -418,7 +421,7 @@ def generate_sitemap(schemes):
     # Schemes
     for s in schemes:
         sitemap_content += f"""  <url>
-    <loc>https://yojana-three.vercel.app/{s["id"]}</loc>
+    <loc>https://www.yojanaguide.in/{s["id"]}</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

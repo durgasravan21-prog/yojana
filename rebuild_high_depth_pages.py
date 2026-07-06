@@ -561,7 +561,7 @@ def generate_page(s, schemes_list):
         # Clean double instances if they crept in
         fullname = fullname.replace("2026 2026", "2026")
         
-    portal = override.get("portal", "https://yojana-three.vercel.app")
+    portal = override.get("portal", "https://www.myscheme.gov.in")
     description = s.get("meta_desc", s.get("desc", ""))
     if not description:
         description = f"Complete guide to {fullname}. Learn about eligibility, benefits, application process, and documents required."
@@ -788,7 +788,7 @@ def generate_page(s, schemes_list):
   <meta property="og:title" content="{fullname} - Complete Guide">
   <meta property="og:description" content="{description}">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}">
+  <link rel="canonical" href="https://www.yojanaguide.in/{s["id"]}">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {{
@@ -800,7 +800,7 @@ def generate_page(s, schemes_list):
     "publisher": {{ "@type": "Organization", "name": "Yojana Guide" }},
     "datePublished": "2026-03-15",
     "dateModified": "2026-07-06",
-    "mainEntityOfPage": "https://yojana-three.vercel.app/{s["id"]}"
+    "mainEntityOfPage": "https://www.yojanaguide.in/{s["id"]}"
   }}
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7490572944753317" crossorigin="anonymous"></script>
