@@ -23,6 +23,24 @@ CATEGORIES = {
     "social": {"name": "Social Welfare & Security", "emoji": '<svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 12c-4.42 0-8 2.24-8 5v3h16v-3c0-2.76-3.58-5-8-5z"/></svg>', "class": "tag-social", "color": "social"}
 }
 
+POPULAR_SCHEME_TITLES = {
+    'pm-kisan': 'PM Kisan Samman Nidhi',
+    'ayushman-bharat': 'Ayushman Bharat PM-JAY',
+    'ujjwala-yojana': 'PM Ujjwala Yojana',
+    'pm-awas': 'PM Awas Yojana',
+    'sukanya-samriddhi': 'Sukanya Samriddhi Yojana',
+    'mudra-yojana': 'PM Mudra Yojana',
+    'pm-surya-ghar': 'PM Surya Ghar Muft Bijli',
+    'lakhpati-didi': 'Lakhpati Didi Scheme',
+    'pm-vishwakarma': 'PM Vishwakarma Yojana',
+    'jan-dhan': 'PM Jan Dhan Yojana',
+    'atal-pension': 'Atal Pension Yojana',
+    'pm-kaushal-vikas': 'PM Kaushal Vikas Yojana',
+    'beti-bachao': 'Beti Bachao Beti Padhao',
+    'kisan-credit-card': 'Kisan Credit Card Scheme',
+    'e-shram': 'e-Shram Card Registration'
+}
+
 def parse_all_schemes():
     schemes = []
     html_files = [f for f in os.listdir(path) if f.endswith('.html') and f not in GENERAL_PAGES]
@@ -34,7 +52,18 @@ def parse_all_schemes():
             
         # Parse title
         title_match = re.search(r'<title>(.*?)<\/title>', content)
-        title = title_match.group(1).split('2026')[0].split('-')[0].strip() if title_match else filename.replace('.html', '').replace('-', ' ').title()
+        scheme_id = filename.replace('.html', '')
+        if scheme_id in POPULAR_SCHEME_TITLES:
+            title = POPULAR_SCHEME_TITLES[scheme_id]
+        elif title_match:
+            raw_title = title_match.group(1)
+            # Remove " - Eligibility..." suffix using space-hyphen-space to protect internal hyphens
+            title_part = raw_title.split(' - ')[0].strip()
+            # Remove "2026" or "2024" year
+            title_part = re.sub(r'\s*\b(2024|2026)\b', '', title_part).strip()
+            title = title_part
+        else:
+            title = filename.replace('.html', '').replace('-', ' ').title()
         
         # Parse fullname
         h1_match = re.search(r'<h1>(.*?)<\/h1>', content)

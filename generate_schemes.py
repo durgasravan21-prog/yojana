@@ -1917,7 +1917,7 @@ def generate_scheme_pages():
   <meta property="og:title" content="{s["fullname"]} - Complete Guide">
   <meta property="og:description" content="{s["meta_desc"]}">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://www.yojanaguide.in/{s["id"]}.html">
+  <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}.html">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -1930,7 +1930,7 @@ def generate_scheme_pages():
     "publisher": {{ "@type": "Organization", "name": "Yojana Guide" }},
     "datePublished": "2026-02-10",
     "dateModified": "2026-07-05",
-    "mainEntityOfPage": "https://www.yojanaguide.in/{s["id"]}.html"
+    "mainEntityOfPage": "https://yojana-three.vercel.app/{s["id"]}.html"
   }}
   </script>
 </head>
@@ -2135,8 +2135,8 @@ def generate_sitemap():
     # General files
     for gf in general_files:
         sitemap_content += f"""  <url>
-    <loc>https://www.yojanaguide.in/{gf}</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://yojana-three.vercel.app/{gf}</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{"1.0" if gf == "index.html" else "0.8"}</priority>
   </url>\n"""
@@ -2144,8 +2144,8 @@ def generate_sitemap():
     # Schemes
     for s in SCHEMES:
         sitemap_content += f"""  <url>
-    <loc>https://www.yojanaguide.in/{s["id"]}.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://yojana-three.vercel.app/{s["id"]}.html</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>\n"""
