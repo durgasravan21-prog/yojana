@@ -1705,3 +1705,63 @@ li {
     display: block;
   }
 }
+
+/* ---------- Category Tags Colors ---------- */
+.tag-education { background: rgba(79, 70, 229, 0.12); color: #4f46e5; }
+.tag-women { background: rgba(236, 72, 153, 0.12); color: #db2777; }
+.tag-employment { background: rgba(13, 148, 136, 0.12); color: #0d9488; }
+.tag-pension { background: rgba(120, 113, 108, 0.12); color: #57534e; }
+.tag-rural { background: rgba(22, 163, 74, 0.12); color: #16a34a; }
+.tag-infrastructure { background: rgba(71, 85, 105, 0.12); color: #475569; }
+.tag-social { background: rgba(8, 145, 178, 0.12); color: #0891b2; }
+
+/* ---------- Scheme Card Icons Colors ---------- */
+.scheme-card-icon.agriculture { background: rgba(46, 204, 113, 0.12); color: var(--accent-green-dark); }
+.scheme-card-icon.health { background: rgba(231, 76, 60, 0.12); color: #c0392b; }
+.scheme-card-icon.housing { background: rgba(155, 89, 182, 0.12); color: #8e44ad; }
+.scheme-card-icon.education { background: rgba(79, 70, 229, 0.12); color: #4f46e5; }
+.scheme-card-icon.women { background: rgba(236, 72, 153, 0.12); color: #db2777; }
+.scheme-card-icon.finance { background: rgba(230, 126, 34, 0.12); color: #d35400; }
+.scheme-card-icon.employment { background: rgba(13, 148, 136, 0.12); color: #0d9488; }
+.scheme-card-icon.pension { background: rgba(120, 113, 108, 0.12); color: #57534e; }
+.scheme-card-icon.rural { background: rgba(22, 163, 74, 0.12); color: #16a34a; }
+.scheme-card-icon.energy { background: rgba(52, 152, 219, 0.12); color: #2980b9; }
+.scheme-card-icon.infrastructure { background: rgba(71, 85, 105, 0.12); color: #475569; }
+.scheme-card-icon.social { background: rgba(8, 145, 178, 0.12); color: #0891b2; }
+
+/* ---------- SVG Icon Styling ---------- */
+.scheme-card-icon svg,
+.category-icon svg,
+.logo-icon svg,
+.logo-text svg,
+.cat-icon svg,
+.icon svg,
+.feature-icon svg,
+.social-svg-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin="round";
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo-icon svg {
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
+}
+.cat-icon svg {
+  width: 36px;
+  height: 36px;
+}
+.feature-icon svg {
+  width: 40px;
+  height: 40px;
+}
+.team-avatar {
+  color: var(--white) !important;
+  font-weight: 700 !important;
+}

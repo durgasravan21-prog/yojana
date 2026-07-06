@@ -20,10 +20,10 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="site-logo" aria-label="Yojana Guide Home">
-        <span class="logo-icon" aria-hidden="true">🏛️</span>
+        <span class="logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L1 7v2h22V7L12 2zm9 8H3v10h3V10h3v10h2V10h2v10h3V10h2v10h3V10zm1 11H2v2h20v-2z"/></svg></span>
         <span class="logo-text">Yojana<span>Guide</span></span>
       </a>
-                        <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+                              <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
           <li><a href="index.html" class="">Home</a></li>
           <li><a href="categories.html" class="active">Categories</a></li>
@@ -83,7 +83,7 @@
         <div class="categories-search-section" style="margin-bottom: 3rem;">
           <div class="categories-search-container" style="max-width: 600px; margin: 0 auto; display: flex; gap: 0.5rem; box-shadow: var(--shadow-card); background: var(--white); padding: 0.5rem; border-radius: 50px; border: 1px solid var(--light-gray); transition: all 0.3s ease;">
             <input type="text" id="categories-search-input" placeholder="Search schemes... (e.g. PM Kisan, Ayushman)" style="flex: 1; border: none; background: transparent; padding: 0.75rem 1.5rem; font-size: 1rem; color: var(--text-main); outline: none;" aria-label="Search government schemes in categories">
-            <button type="button" id="categories-search-btn" style="background: var(--primary-color); color: var(--white); border: none; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: background 0.2s;" aria-label="Search">🔍 Search</button>
+            <button type="button" id="categories-search-btn" style="background: var(--primary-color); color: var(--white); border: none; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;" aria-label="Search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search</button>
           </div>
         </div>
 
@@ -98,73 +98,73 @@
         <div class="categories-page-grid">
 
           <div class="category-full-card" onclick="filterByCategory('agriculture', 'Agriculture & Farming')">
-            <span class="cat-icon" aria-hidden="true">🌾</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></span>
             <h3>Agriculture & Farming</h3>
             <p>Government schemes supporting farmers with financial assistance, crop insurance, irrigation subsidies, and agricultural loans.</p>
             <span class="scheme-badge">6 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('health', 'Health & Medical')">
-            <span class="cat-icon" aria-hidden="true">🏥</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
             <h3>Health & Medical</h3>
             <p>Healthcare schemes providing insurance coverage, medical assistance, and hospital access for families.</p>
             <span class="scheme-badge">5 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('housing', 'Housing & Shelter')">
-            <span class="cat-icon" aria-hidden="true">🏠</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
             <h3>Housing & Shelter</h3>
             <p>Affordable housing programs and rooftop solar utility subsidy programs providing direct incentives.</p>
             <span class="scheme-badge">6 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('education', 'Education & Skill Development')">
-            <span class="cat-icon" aria-hidden="true">📚</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></span>
             <h3>Education & Skill Development</h3>
             <p>Scholarship programs, skill training initiatives, and educational assistance for students and traditional artisans.</p>
             <span class="scheme-badge">8 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('women', 'Women & Child Development')">
-            <span class="cat-icon" aria-hidden="true">👩‍👧</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
             <h3>Women & Child Development</h3>
             <p>Empowerment programs for women and children including savings schemes, maternity benefits, and nutrition programs.</p>
             <span class="scheme-badge">6 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('finance', 'Financial Inclusion & Business')">
-            <span class="cat-icon" aria-hidden="true">💰</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></span>
             <h3>Financial Inclusion & Business</h3>
             <p>Banking access, micro-finance loans, pension schemes, and entrepreneurship support programs.</p>
             <span class="scheme-badge">7 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('employment', 'Employment & Self-Employment')">
-            <span class="cat-icon" aria-hidden="true">💼</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
             <h3>Employment & Self-Employment</h3>
             <p>Employment guarantees, job creation initiatives, and seed funding support for startups.</p>
             <span class="scheme-badge">2 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('pension', 'Pension & Social Security')">
-            <span class="cat-icon" aria-hidden="true">👴</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
             <h3>Pension & Social Security</h3>
             <p>Social security, pensions, and insurance safety nets for unorganized workers and senior citizens.</p>
             <span class="scheme-badge">2 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('rural', 'Rural Development')">
-            <span class="cat-icon" aria-hidden="true">🏘️</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <h3>Rural Development</h3>
             <p>Welfare and infrastructure development schemes targeting rural infrastructure, water supply, and rural employment.</p>
             <span class="scheme-badge">4 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('energy', 'Energy & Power')">
-            <span class="cat-icon" aria-hidden="true">⚡</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
             <h3>Energy & Power</h3>
             <p>Power and electricity initiatives focusing on rural electrification, free solar installations, and green energy.</p>
             <span class="scheme-badge">2 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('infrastructure', 'Infrastructure & Development')">
-            <span class="cat-icon" aria-hidden="true">🏗️</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
             <h3>Infrastructure & Development</h3>
             <p>National programs for smart cities development, urban rejuvenation, and robust roads networks development.</p>
             <span class="scheme-badge">1 Schemes</span>
           </div>
           <div class="category-full-card" onclick="filterByCategory('social', 'Social Welfare & Security')">
-            <span class="cat-icon" aria-hidden="true">🤝</span>
+            <span class="cat-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 12c-4.42 0-8 2.24-8 5v3h16v-3c0-2.76-3.58-5-8-5z"/></svg></span>
             <h3>Social Welfare & Security</h3>
             <p>Nutritional support programs, generic medicine provision, and safety nets for the marginalized.</p>
             <span class="scheme-badge">1 Schemes</span>
@@ -176,350 +176,350 @@
         <div id="schemes-results-section" style="display: none;">
           <div class="schemes-grid" id="schemes-list-container">
           <article class="scheme-card" data-category="agriculture">
-            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <div class="scheme-card-icon agriculture" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></div>
             <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
             <h3><a href="kisan-credit-card.html">Kisan Credit Card Scheme</a></h3>
             <p>Short-term credit loans for agricultural needs</p>
             <a href="kisan-credit-card.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="agriculture">
-            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <div class="scheme-card-icon agriculture" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></div>
             <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
             <h3><a href="paramparagat-krishi.html">Paramparagat Krishi Vikas Yojana</a></h3>
             <p>Promotion of organic farming practices in India</p>
             <a href="paramparagat-krishi.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="agriculture">
-            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <div class="scheme-card-icon agriculture" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></div>
             <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
             <h3><a href="pm-fasal-bima.html">PM Fasal Bima Yojana</a></h3>
             <p>Crop insurance protection against natural calamities</p>
             <a href="pm-fasal-bima.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="agriculture">
-            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <div class="scheme-card-icon agriculture" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></div>
             <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
             <h3><a href="pm-kisan-maandhan.html">PM Kisan Maandhan Yojana</a></h3>
             <p>Pension scheme for small and marginal farmers</p>
             <a href="pm-kisan-maandhan.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="agriculture">
-            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <div class="scheme-card-icon agriculture" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></div>
             <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
             <h3><a href="pm-kisan.html">PM Kisan Samman Nidhi</a></h3>
             <p>₹6,000 annual income support to farmer families</p>
             <a href="pm-kisan.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="agriculture">
-            <div class="scheme-card-icon agriculture" aria-hidden="true">🌾</div>
+            <div class="scheme-card-icon agriculture" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22V12M12 12c-2-2.67-4-2.67-6 0M12 14c2-2.67 4-2.67 6 0M12 18c-3-2-6-1.33-6 2M12 18c3-2 6-1.33 6 2"/></svg></div>
             <span class="scheme-card-tag tag-agriculture">Agriculture & Farming</span>
             <h3><a href="soil-health-card.html">Soil Health Card Scheme</a></h3>
             <p>Nutrient testing and recommendation cards for soil</p>
             <a href="soil-health-card.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="health">
-            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <div class="scheme-card-icon health" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
             <span class="scheme-card-tag tag-health">Health & Medical</span>
             <h3><a href="ayushman-bharat.html">Ayushman Bharat PM JAY</a></h3>
             <p>Free health insurance up to ₹5 lakh per family</p>
             <a href="ayushman-bharat.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="health">
-            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <div class="scheme-card-icon health" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
             <span class="scheme-card-tag tag-health">Health & Medical</span>
             <h3><a href="janani-suraksha.html">Janani Suraksha Yojana</a></h3>
             <p>Cash incentive for promoting institutional deliveries</p>
             <a href="janani-suraksha.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="health">
-            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <div class="scheme-card-icon health" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
             <span class="scheme-card-tag tag-health">Health & Medical</span>
             <h3><a href="jssk.html">Janani Shishu Suraksha Karyakram</a></h3>
             <p>Zero-expense delivery and neonatal care in public hospitals</p>
             <a href="jssk.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="health">
-            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <div class="scheme-card-icon health" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
             <span class="scheme-card-tag tag-health">Health & Medical</span>
             <h3><a href="mission-indradhanush.html">Mission Indradhanush Vaccination</a></h3>
             <p>Immunization coverage for children and pregnant women</p>
             <a href="mission-indradhanush.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="health">
-            <div class="scheme-card-icon health" aria-hidden="true">🏥</div>
+            <div class="scheme-card-icon health" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
             <span class="scheme-card-tag tag-health">Health & Medical</span>
             <h3><a href="pm-jan-aushadhi.html">PM Jan Aushadhi Pariyojana</a></h3>
             <p>Quality generic medicines at highly affordable prices</p>
             <a href="pm-jan-aushadhi.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="housing">
-            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <div class="scheme-card-icon housing" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
             <h3><a href="amrut.html">AMRUT Urban Rejuvenation</a></h3>
             <p>Urban infrastructure development for tap water and parks</p>
             <a href="amrut.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="housing">
-            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <div class="scheme-card-icon housing" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
             <h3><a href="pm-awas-urban.html">PM Awas Yojana Urban</a></h3>
             <p>Affordable housing subsidies for urban poor families</p>
             <a href="pm-awas-urban.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="housing">
-            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <div class="scheme-card-icon housing" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
             <h3><a href="pm-awas.html">PM Awas Yojana Rural</a></h3>
             <p>Financial aid to build permanent pucca houses in villages</p>
             <a href="pm-awas.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="housing">
-            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <div class="scheme-card-icon housing" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
             <h3><a href="pm-surya-ghar.html">PM Surya Ghar Muft Bijli</a></h3>
             <p>Rooftop solar subsidy scheme for free electricity</p>
             <a href="pm-surya-ghar.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="housing">
-            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <div class="scheme-card-icon housing" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
             <h3><a href="smart-cities.html">Smart Cities Mission</a></h3>
             <p>Smart civic services and sustainable infrastructure in 100 cities</p>
             <a href="smart-cities.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="housing">
-            <div class="scheme-card-icon housing" aria-hidden="true">🏠</div>
+            <div class="scheme-card-icon housing" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <span class="scheme-card-tag tag-housing">Housing & Shelter</span>
             <h3><a href="swachh-bharat.html">Swachh Bharat Mission Gramin</a></h3>
             <p>Odf-plus village development and rural sanitation</p>
             <a href="swachh-bharat.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="national-apprenticeship.html">National Apprenticeship Promotion</a></h3>
             <p>Financial stipend support for apprenticeship training</p>
             <a href="national-apprenticeship.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="national-career-service.html">National Career Service Portal</a></h3>
             <p>Job matching, career counseling, and vocational training portal</p>
             <a href="national-career-service.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="national-overseas-scholarship.html">National Overseas Scholarship</a></h3>
             <p>Financial aid for SC/ST students studying abroad</p>
             <a href="national-overseas-scholarship.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="pm-kaushal-vikas.html">PM Kaushal Vikas Yojana</a></h3>
             <p>Industry-relevant skill certification and job placement assistance</p>
             <a href="pm-kaushal-vikas.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="pm-shri-schools.html">PM SHRI Schools</a></h3>
             <p>Upgradation of schools into showcase green institutions</p>
             <a href="pm-shri-schools.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="pmrf.html">PM Research Fellowship</a></h3>
             <p>Direct fellowship for doctoral research in top tech institutes</p>
             <a href="pmrf.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="pragati-scholarship.html">Pragati Scholarship for Girls</a></h3>
             <p>Technical education scholarships for girl students</p>
             <a href="pragati-scholarship.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="education">
-            <div class="scheme-card-icon education" aria-hidden="true">📚</div>
+            <div class="scheme-card-icon education" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z"/></svg></div>
             <span class="scheme-card-tag tag-education">Education & Skill Development</span>
             <h3><a href="samagra-shiksha.html">Samagra Shiksha Abhiyan</a></h3>
             <p>Integrated school education support from pre-school to class 12</p>
             <a href="samagra-shiksha.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="women">
-            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <div class="scheme-card-icon women" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
             <span class="scheme-card-tag tag-women">Women & Child Development</span>
             <h3><a href="beti-bachao.html">Beti Bachao Beti Padhao</a></h3>
             <p>Social campaign to prevent female foeticide and educate girls</p>
             <a href="beti-bachao.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="women">
-            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <div class="scheme-card-icon women" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
             <span class="scheme-card-tag tag-women">Women & Child Development</span>
             <h3><a href="lakhpati-didi.html">Lakhpati Didi Self Help Groups</a></h3>
             <p>Skill training to help SHG women earn 1 lakh annually</p>
             <a href="lakhpati-didi.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="women">
-            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <div class="scheme-card-icon women" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
             <span class="scheme-card-tag tag-women">Women & Child Development</span>
             <h3><a href="mahila-shakti-kendra.html">Mahila Shakti Kendra</a></h3>
             <p>Empowering rural women with skills, digital literacy, and rights</p>
             <a href="mahila-shakti-kendra.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="women">
-            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <div class="scheme-card-icon women" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
             <span class="scheme-card-tag tag-women">Women & Child Development</span>
             <h3><a href="mission-shakti.html">Mission Shakti Women Safety</a></h3>
             <p>Unified umbrella scheme for safety, security, and empowerment of women</p>
             <a href="mission-shakti.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="women">
-            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <div class="scheme-card-icon women" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
             <span class="scheme-card-tag tag-women">Women & Child Development</span>
             <h3><a href="sukanya-samriddhi.html">Sukanya Samriddhi Yojana Account</a></h3>
             <p>High-interest savings account for girl children</p>
             <a href="sukanya-samriddhi.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="women">
-            <div class="scheme-card-icon women" aria-hidden="true">👩‍👧</div>
+            <div class="scheme-card-icon women" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
             <span class="scheme-card-tag tag-women">Women & Child Development</span>
             <h3><a href="ujjwala-yojana.html">PM Ujjwala Yojana Gas</a></h3>
             <p>Free LPG connection and stove to BPL families</p>
             <a href="ujjwala-yojana.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="atal-pension.html">Atal Pension Yojana APY</a></h3>
             <p>Guaranteed monthly pension of 1,000 to 5,000 for unorganized workers</p>
             <a href="atal-pension.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="cgtmse-scheme.html">Credit Guarantee Fund CGTMSE</a></h3>
             <p>Collateral-free credit guarantee for MSME loans up to 5 crore</p>
             <a href="cgtmse-scheme.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="jan-dhan.html">PM Jan Dhan Yojana Accounts</a></h3>
             <p>Zero-balance bank accounts with debit card and insurance benefits</p>
             <a href="jan-dhan.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="mudra-yojana.html">PM Mudra Yojana Loans</a></h3>
             <p>Collateral-free business loans up to 10 lakh for small enterprises</p>
             <a href="mudra-yojana.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="pm-shram-yogi.html">PM Shram Yogi Maan Dhan</a></h3>
             <p>Voluntary pension scheme for unorganized sector workers</p>
             <a href="pm-shram-yogi.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="pmegp.html">Prime Ministers Employment Programme</a></h3>
             <p>Subsidies up to 35 percent for manufacturing and service businesses</p>
             <a href="pmegp.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="finance">
-            <div class="scheme-card-icon finance" aria-hidden="true">💰</div>
+            <div class="scheme-card-icon finance" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="22" width="20" height="2"/><line x1="4" y1="18" x2="4" y2="10"/><line x1="8" y1="18" x2="8" y2="10"/><line x1="12" y1="18" x2="12" y2="10"/><line x1="16" y1="18" x2="16" y2="10"/><line x1="20" y1="18" x2="20" y2="10"/><path d="M12 2L2 7h20L12 2z"/></svg></div>
             <span class="scheme-card-tag tag-finance">Financial Inclusion & Business</span>
             <h3><a href="stand-up-india.html">Stand Up India Scheme</a></h3>
             <p>Bank loans up to 1 crore for SC/ST and women greenfield startups</p>
             <a href="stand-up-india.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="employment">
-            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <div class="scheme-card-icon employment" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
             <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
             <h3><a href="garib-kalyan-rojgar.html">Garib Kalyan Rojgar Abhiyaan</a></h3>
             <p>Employment creation drive for returnee migrant workers in villages</p>
             <a href="garib-kalyan-rojgar.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="employment">
-            <div class="scheme-card-icon employment" aria-hidden="true">💼</div>
+            <div class="scheme-card-icon employment" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
             <span class="scheme-card-tag tag-employment">Employment & Self-Employment</span>
             <h3><a href="mgnrega.html">MGNREGA Rural Employment</a></h3>
             <p>Guaranteed 100 days of manual wage employment per rural household</p>
             <a href="mgnrega.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="pension">
-            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <div class="scheme-card-icon pension" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
             <h3><a href="pmvvy.html">Pradhan Mantri Vaya Vandana</a></h3>
             <p>Investment-linked pension scheme for senior citizens offering 7.4 percent return</p>
             <a href="pmvvy.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="pension">
-            <div class="scheme-card-icon pension" aria-hidden="true">👴</div>
+            <div class="scheme-card-icon pension" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <span class="scheme-card-tag tag-pension">Pension & Social Security</span>
             <h3><a href="varishtha-pension.html">Varishtha Pension Bima Yojana</a></h3>
             <p>Guaranteed interest return pension scheme for senior citizens</p>
             <a href="varishtha-pension.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="rural">
-            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <div class="scheme-card-icon rural" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <span class="scheme-card-tag tag-rural">Rural Development</span>
             <h3><a href="jal-jeevan-mission.html">Jal Jeevan Mission Rural</a></h3>
             <p>Tap water connections to all rural households by 2026</p>
             <a href="jal-jeevan-mission.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="rural">
-            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <div class="scheme-card-icon rural" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <span class="scheme-card-tag tag-rural">Rural Development</span>
             <h3><a href="pm-gram-sadak.html">PM Gram Sadak Yojana Roads</a></h3>
             <p>All-weather road connectivity to unconnected villages</p>
             <a href="pm-gram-sadak.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="rural">
-            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <div class="scheme-card-icon rural" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <span class="scheme-card-tag tag-rural">Rural Development</span>
             <h3><a href="rurban-mission.html">Shama Prasad Mukherji Rurban Mission</a></h3>
             <p>Urban-like facility clusters development in rural areas</p>
             <a href="rurban-mission.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="rural">
-            <div class="scheme-card-icon rural" aria-hidden="true">🏘️</div>
+            <div class="scheme-card-icon rural" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <span class="scheme-card-tag tag-rural">Rural Development</span>
             <h3><a href="saubhagya.html">Saubhagya Electricity Scheme</a></h3>
             <p>Free electricity connection to willing rural households</p>
             <a href="saubhagya.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="energy">
-            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <div class="scheme-card-icon energy" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <span class="scheme-card-tag tag-energy">Energy & Power</span>
             <h3><a href="national-solar-mission.html">National Solar Mission Grid</a></h3>
             <p>Grid-tied solar parks and large scale green energy generation</p>
             <a href="national-solar-mission.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="energy">
-            <div class="scheme-card-icon energy" aria-hidden="true">⚡</div>
+            <div class="scheme-card-icon energy" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <span class="scheme-card-tag tag-energy">Energy & Power</span>
             <h3><a href="ujala-scheme.html">UJALA LED Bulb Scheme</a></h3>
             <p>Subsidized energy-efficient LED bulbs and fan distribution</p>
             <a href="ujala-scheme.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="infrastructure">
-            <div class="scheme-card-icon infrastructure" aria-hidden="true">🏗️</div>
+            <div class="scheme-card-icon infrastructure" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
             <span class="scheme-card-tag tag-infrastructure">Infrastructure & Development</span>
             <h3><a href="gati-shakti.html">PM Gati Shakti National Master Plan</a></h3>
             <p>Multimodal transport infrastructure planning portal</p>
             <a href="gati-shakti.html" class="card-link">Read Full Guide →</a>
           </article>
           <article class="scheme-card" data-category="social">
-            <div class="scheme-card-icon social" aria-hidden="true">🤝</div>
+            <div class="scheme-card-icon social" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 12c-4.42 0-8 2.24-8 5v3h16v-3c0-2.76-3.58-5-8-5z"/></svg></div>
             <span class="scheme-card-tag tag-social">Social Welfare & Security</span>
             <h3><a href="national-food-security.html">National Food Security Ration</a></h3>
             <p>Subsidized ration supply through Fair Price Shops</p>
@@ -534,17 +534,18 @@
   </main>
 
   <!-- Footer -->
-              <footer class="site-footer" role="contentinfo">
+                  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <span class="logo-text">🏛️ Yojana<span style="color: var(--accent-orange);">Guide</span></span>
+          <span class="logo-text"><svg viewBox="0 0 24 24" class="logo-svg" style="display:inline-block;vertical-align:middle;margin-right:8px;width:24px;height:24px;fill:currentColor;"><path d="M12 2L1 7v2h22V7L12 2zm9 8H3v10h3V10h3v10h2V10h2v10h3V10h2v10h3V10zm1 11H2v2h20v-2z"/></svg>Yojana<span style="color: var(--accent-orange);">Guide</span></span>
           <p>Your trusted source for comprehensive information about Indian government schemes.</p>
           <div class="social-links">
-            <a href="about.html" class="social-link" aria-label="About Us">ℹ️</a>
-            <a href="contact.html" class="social-link" aria-label="Contact">✉️</a>
-            <a href="categories.html" class="social-link" aria-label="Categories">📂</a>
+            <a href="about.html" class="social-link" aria-label="About Us"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></a>
+            <a href="contact.html" class="social-link" aria-label="Contact"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+            <a href="categories.html" class="social-link" aria-label="Categories"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></a>
           </div>
+        </div>
         </div>
         <div>
           <h4 class="footer-heading">Popular Schemes</h4>
