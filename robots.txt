@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.yojanaguide.in/sitemap.xml
+Sitemap: https://yojana-three.vercel.app/sitemap.xml

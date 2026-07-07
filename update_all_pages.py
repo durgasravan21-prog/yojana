@@ -226,9 +226,9 @@ def update_all_files():
         
         # 2.3 Clean Canonical URL in <head>
         if filename == 'index.html':
-            expected_canonical = "https://www.yojanaguide.in/"
+            expected_canonical = "https://yojana-three.vercel.app/"
         else:
-            expected_canonical = f"https://www.yojanaguide.in/{filename.replace('.html', '')}"
+            expected_canonical = f"https://yojana-three.vercel.app/{filename.replace('.html', '')}"
             
         content = re.sub(
             r'<link\s+rel="canonical"\s+href="[^"]+"',
@@ -236,9 +236,10 @@ def update_all_files():
             content
         )
         
-        # Replace other URL instances dynamically
-        content = content.replace("https://yojana-three.vercel.app", "https://www.yojanaguide.in")
-        content = content.replace("yojana-three.vercel.app", "yojanaguide.in")
+        # Replace custom domain instances dynamically to Vercel subdomain for review
+        content = content.replace("https://www.yojanaguide.in", "https://yojana-three.vercel.app")
+        content = content.replace("https://yojanaguide.in", "https://yojana-three.vercel.app")
+        content = content.replace("yojanaguide.in", "yojana-three.vercel.app")
         
         # 3. Update Category lists in categories.html
         if filename == "categories.html":
@@ -408,9 +409,9 @@ def generate_sitemap(schemes):
     for gf in GENERAL_PAGES:
         clean_gf = gf.replace('.html', '')
         if clean_gf == 'index':
-            loc = "https://www.yojanaguide.in/"
+            loc = "https://yojana-three.vercel.app/"
         else:
-            loc = f"https://www.yojanaguide.in/{clean_gf}"
+            loc = f"https://yojana-three.vercel.app/{clean_gf}"
             
         sitemap_content += f"""  <url>
     <loc>{loc}</loc>
@@ -422,7 +423,7 @@ def generate_sitemap(schemes):
     # Schemes
     for s in schemes:
         sitemap_content += f"""  <url>
-    <loc>https://www.yojanaguide.in/{s["id"]}</loc>
+    <loc>https://yojana-three.vercel.app/{s["id"]}</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -788,7 +788,7 @@ def generate_page(s, schemes_list):
   <meta property="og:title" content="{fullname} - Complete Guide">
   <meta property="og:description" content="{description}">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://www.yojanaguide.in/{s["id"]}">
+  <link rel="canonical" href="https://yojana-three.vercel.app/{s["id"]}">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {{
@@ -800,7 +800,7 @@ def generate_page(s, schemes_list):
     "publisher": {{ "@type": "Organization", "name": "Yojana Guide" }},
     "datePublished": "2026-03-15",
     "dateModified": "2026-07-06",
-    "mainEntityOfPage": "https://www.yojanaguide.in/{s["id"]}"
+    "mainEntityOfPage": "https://yojana-three.vercel.app/{s["id"]}"
   }}
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7490572944753317" crossorigin="anonymous"></script>
