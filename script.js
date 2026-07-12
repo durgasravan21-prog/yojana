@@ -476,12 +476,8 @@ window.renderReviews = function() {
     console.error("Error reading reviews from localStorage", e);
   }
   
-  let reviewsToDisplay = [];
-  if (userReviews && userReviews.length > 0) {
-    reviewsToDisplay = userReviews.slice(0, 5); // Show only top 5 real reviews
-  } else {
-    reviewsToDisplay = DEFAULT_REVIEWS; // Fallback if no user has given reviews yet
-  }
+  // Combine user reviews and default fallback reviews to always show the latest 5 reviews
+  const reviewsToDisplay = userReviews.concat(DEFAULT_REVIEWS).slice(0, 5);
   
   container.innerHTML = '';
   
