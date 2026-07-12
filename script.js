@@ -433,7 +433,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-/* ---------- User Reviews System ---------- */
+/* ---------- User Reviews System (Supabase Synchronized) ---------- */
+const SUPABASE_URL = "https://yczaawzduuegsurmzljk.supabase.co/rest/v1/yojana_reviews";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljemFhd3pkdXVlZ3N1cm16bGprIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMDk4MTYsImV4cCI6MjA5NjU4NTgxNn0.WSqV-znpcCtca7x5c2mhV9WxfoAyy_dNA3WBXtIsTxk";
+
 const DEFAULT_REVIEWS = [
   { name: "Ramesh Kumar", rating: 5, comment: "This site made it so simple to check PM Kisan status. Excellent guide!", date: "07 Jul 2026" },
   { name: "Sravani Reddy", rating: 5, comment: "I applied for Lakhpati Didi after reading the document list here. Very informative.", date: "05 Jul 2026" },
@@ -466,22 +469,60 @@ window.renderReviews = function() {
   const container = document.getElementById('reviews-list-container');
   if (!container) return;
   
-  let userReviews = [];
-  try {
-    const stored = localStorage.getItem('yojana_user_reviews');
-    if (stored) {
-      userReviews = JSON.parse(stored);
-    }
-  } catch (e) {
-    console.error("Error reading reviews from localStorage", e);
+  if (container.children.length === 0) {
+    container.innerHTML = '<div style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">Loading reviews...</div>';
   }
   
-  // Combine user reviews and default fallback reviews to always show the latest 5 reviews
-  const reviewsToDisplay = userReviews.concat(DEFAULT_REVIEWS).slice(0, 5);
+  fetch(`${SUPABASE_URL}?select=*&order=created_at.desc&limit=5`, {
+    method: 'GET',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`
+    }
+  })
+  .then(response => {
+    if (!response.ok) throw new Error('Network response was not ok');
+    return response.json();
+  })
+  .then(data => {
+    const serverReviews = data.map(item => {
+      const dateObj = new Date(item.created_at);
+      const options = { day: '2-digit', month: 'short', year: 'numeric' };
+      const formattedDate = dateObj.toLocaleDateString('en-GB', options);
+      return {
+        name: item.name,
+        rating: item.rating,
+        comment: item.comment,
+        date: formattedDate
+      };
+    });
+    
+    const reviewsToDisplay = serverReviews.concat(DEFAULT_REVIEWS).slice(0, 5);
+    displayReviews(reviewsToDisplay);
+  })
+  .catch(error => {
+    console.error("Error fetching reviews from Supabase:", error);
+    let userReviews = [];
+    try {
+      const stored = localStorage.getItem('yojana_user_reviews');
+      if (stored) {
+        userReviews = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    const reviewsToDisplay = userReviews.concat(DEFAULT_REVIEWS).slice(0, 5);
+    displayReviews(reviewsToDisplay);
+  });
+};
+
+function displayReviews(reviews) {
+  const container = document.getElementById('reviews-list-container');
+  if (!container) return;
   
   container.innerHTML = '';
   
-  reviewsToDisplay.forEach(review => {
+  reviews.forEach(review => {
     const initials = getInitials(review.name);
     const color = getAvatarColor(review.name);
     
@@ -511,7 +552,7 @@ window.renderReviews = function() {
     `;
     container.appendChild(card);
   });
-};
+}
 
 function escapeHtml(str) {
   return str.replace(/&/g, "&amp;")
@@ -526,6 +567,7 @@ window.submitReview = function(event) {
   
   const nameInput = document.getElementById('review-username');
   const commentInput = document.getElementById('review-comment');
+  const submitBtn = document.querySelector('.btn-submit-review');
   
   if (!nameInput || !commentInput) return;
   
@@ -541,40 +583,85 @@ window.submitReview = function(event) {
   
   if (!name || !comment || isNaN(rating)) return;
   
-  const today = new Date();
-  const options = { day: '2-digit', month: 'short', year: 'numeric' };
-  const formattedDate = today.toLocaleDateString('en-GB', options);
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+  }
   
-  const newReview = {
+  const payload = {
     name: name,
     rating: rating,
-    comment: comment,
-    date: formattedDate
+    comment: comment
   };
   
-  let userReviews = [];
-  try {
-    const stored = localStorage.getItem('yojana_user_reviews');
-    if (stored) {
-      userReviews = JSON.parse(stored);
+  fetch(SUPABASE_URL, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=representation'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to save review');
+    return response.json();
+  })
+  .then(() => {
+    window.renderReviews();
+    
+    let localReviews = [];
+    try {
+      const stored = localStorage.getItem('yojana_user_reviews');
+      if (stored) localReviews = JSON.parse(stored);
+    } catch(e) {}
+    
+    const today = new Date();
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    localReviews.unshift({
+      name: name,
+      rating: rating,
+      comment: comment,
+      date: today.toLocaleDateString('en-GB', options)
+    });
+    try {
+      localStorage.setItem('yojana_user_reviews', JSON.stringify(localReviews));
+    } catch(e) {}
+  })
+  .catch(error => {
+    console.error("Error submitting review to Supabase:", error);
+    alert("There was an issue submitting your review online. Saving locally instead.");
+    
+    let localReviews = [];
+    try {
+      const stored = localStorage.getItem('yojana_user_reviews');
+      if (stored) localReviews = JSON.parse(stored);
+    } catch(e) {}
+    const today = new Date();
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    localReviews.unshift({
+      name: name,
+      rating: rating,
+      comment: comment,
+      date: today.toLocaleDateString('en-GB', options)
+    });
+    try {
+      localStorage.setItem('yojana_user_reviews', JSON.stringify(localReviews));
+    } catch(e) {}
+    
+    window.renderReviews();
+  })
+  .finally(() => {
+    nameInput.value = '';
+    commentInput.value = '';
+    ratingInput.checked = false;
+    const ratingRadios = document.querySelectorAll('input[name="rating"]');
+    ratingRadios.forEach(radio => radio.checked = false);
+    
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Review";
     }
-  } catch (e) {
-    console.error("Error reading reviews from localStorage", e);
-  }
-  
-  userReviews.unshift(newReview);
-  
-  try {
-    localStorage.setItem('yojana_user_reviews', JSON.stringify(userReviews));
-  } catch (e) {
-    console.error("Error saving reviews to localStorage", e);
-  }
-  
-  window.renderReviews();
-  
-  nameInput.value = '';
-  commentInput.value = '';
-  ratingInput.checked = false;
-  const ratingRadios = document.querySelectorAll('input[name="rating"]');
-  ratingRadios.forEach(radio => radio.checked = false);
+  });
 };
