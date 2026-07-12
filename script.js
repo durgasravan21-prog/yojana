@@ -426,4 +426,159 @@ document.addEventListener('DOMContentLoaded', function() {
       window.filterByCategory(cat, catName);
     }, 50);
   }
+
+  // Initial reviews render on page load
+  if (document.getElementById('reviews-list-container')) {
+    window.renderReviews();
+  }
 });
+
+/* ---------- User Reviews System ---------- */
+const DEFAULT_REVIEWS = [
+  { name: "Ramesh Kumar", rating: 5, comment: "This site made it so simple to check PM Kisan status. Excellent guide!", date: "07 Jul 2026" },
+  { name: "Sravani Reddy", rating: 5, comment: "I applied for Lakhpati Didi after reading the document list here. Very informative.", date: "05 Jul 2026" },
+  { name: "Amit Sharma", rating: 4, comment: "Clear explanations, and no complicated terms. Perfect reference for government schemes.", date: "03 Jul 2026" },
+  { name: "Priya Patel", rating: 5, comment: "The step-by-step guide for Ayushman Card registration is very detailed and works.", date: "01 Jul 2026" },
+  { name: "Rajesh Verma", rating: 4, comment: "Good structured tables with clean URLs. Highly recommended for quick references.", date: "28 Jun 2026" }
+];
+
+function getInitials(name) {
+  return name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+}
+
+function getAvatarColor(name) {
+  const colors = [
+    '#2563eb', // Blue
+    '#059669', // Green
+    '#7c3aed', // Purple
+    '#db2777', // Pink
+    '#ea580c', // Orange
+    '#0891b2'  // Cyan
+  ];
+  let sum = 0;
+  for (let i = 0; i < name.length; i++) {
+    sum += name.charCodeAt(i);
+  }
+  return colors[sum % colors.length];
+}
+
+window.renderReviews = function() {
+  const container = document.getElementById('reviews-list-container');
+  if (!container) return;
+  
+  let userReviews = [];
+  try {
+    const stored = localStorage.getItem('yojana_user_reviews');
+    if (stored) {
+      userReviews = JSON.parse(stored);
+    }
+  } catch (e) {
+    console.error("Error reading reviews from localStorage", e);
+  }
+  
+  let reviewsToDisplay = [];
+  if (userReviews && userReviews.length > 0) {
+    reviewsToDisplay = userReviews.slice(0, 5); // Show only top 5 real reviews
+  } else {
+    reviewsToDisplay = DEFAULT_REVIEWS; // Fallback if no user has given reviews yet
+  }
+  
+  container.innerHTML = '';
+  
+  reviewsToDisplay.forEach(review => {
+    const initials = getInitials(review.name);
+    const color = getAvatarColor(review.name);
+    
+    let starsHtml = '';
+    for (let i = 1; i <= 5; i++) {
+      if (i <= review.rating) {
+        starsHtml += '&#9733;';
+      } else {
+        starsHtml += '&#9734;';
+      }
+    }
+    
+    const card = document.createElement('div');
+    card.className = 'review-card';
+    card.innerHTML = `
+      <div class="review-avatar" style="background-color: ${color}">${initials}</div>
+      <div class="review-details">
+        <div class="review-header">
+          <div class="review-user-info">
+            <h4>${escapeHtml(review.name)}</h4>
+            <div class="review-stars">${starsHtml}</div>
+          </div>
+          <span class="review-date">${review.date}</span>
+        </div>
+        <p class="review-comment">${escapeHtml(review.comment)}</p>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+};
+
+function escapeHtml(str) {
+  return str.replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+}
+
+window.submitReview = function(event) {
+  event.preventDefault();
+  
+  const nameInput = document.getElementById('review-username');
+  const commentInput = document.getElementById('review-comment');
+  
+  if (!nameInput || !commentInput) return;
+  
+  const ratingInput = document.querySelector('input[name="rating"]:checked');
+  if (!ratingInput) {
+    alert("Please select a rating!");
+    return;
+  }
+  
+  const name = nameInput.value.trim();
+  const comment = commentInput.value.trim();
+  const rating = parseInt(ratingInput.value, 10);
+  
+  if (!name || !comment || isNaN(rating)) return;
+  
+  const today = new Date();
+  const options = { day: '2-digit', month: 'short', year: 'numeric' };
+  const formattedDate = today.toLocaleDateString('en-GB', options);
+  
+  const newReview = {
+    name: name,
+    rating: rating,
+    comment: comment,
+    date: formattedDate
+  };
+  
+  let userReviews = [];
+  try {
+    const stored = localStorage.getItem('yojana_user_reviews');
+    if (stored) {
+      userReviews = JSON.parse(stored);
+    }
+  } catch (e) {
+    console.error("Error reading reviews from localStorage", e);
+  }
+  
+  userReviews.unshift(newReview);
+  
+  try {
+    localStorage.setItem('yojana_user_reviews', JSON.stringify(userReviews));
+  } catch (e) {
+    console.error("Error saving reviews to localStorage", e);
+  }
+  
+  window.renderReviews();
+  
+  nameInput.value = '';
+  commentInput.value = '';
+  ratingInput.checked = false;
+  const ratingRadios = document.querySelectorAll('input[name="rating"]');
+  ratingRadios.forEach(radio => radio.checked = false);
+};
