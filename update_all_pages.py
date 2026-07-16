@@ -147,7 +147,6 @@ def get_footer(popular_schemes=[]):
             <a href="categories" class="social-link" aria-label="Categories"><svg viewBox="0 0 24 24" class="social-svg-icon" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></a>
           </div>
         </div>
-        </div>
         <div>
           <h4 class="footer-heading">Popular Schemes</h4>
           <ul class="footer-links">
