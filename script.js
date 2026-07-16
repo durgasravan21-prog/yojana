@@ -164,8 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ---------- Contact Form Validation & Submission (Supabase) ---------- */
-  const SUPABASE_CONTACT_URL = "https://yczaawzduuegsurmzljk.supabase.co/rest/v1/contact_messages";
+  /* ---------- Contact Form Validation & Submission (FormSubmit Email) ---------- */
   const contactForm = document.getElementById('contactForm');
 
   if (contactForm) {
@@ -221,18 +220,20 @@ document.addEventListener('DOMContentLoaded', function () {
           message: messageField.value.trim()
         };
 
-        fetch(SUPABASE_CONTACT_URL, {
+        // POST to FormSubmit AJAX endpoint for direct email delivery to durgasravan21@gmail.com
+        fetch("https://formsubmit.co/ajax/durgasravan21@gmail.com", {
           method: 'POST',
           headers: {
-            'apikey': SUPABASE_KEY,
-            'Authorization': 'Bearer ' + SUPABASE_KEY,
             'Content-Type': 'application/json',
-            'Prefer': 'return=minimal'
+            'Accept': 'application/json'
           },
           body: JSON.stringify(payload)
         })
         .then(function(response) {
           if (!response.ok) throw new Error('Failed to send message');
+          return response.json();
+        })
+        .then(function(data) {
           const successMsg = document.querySelector('.success-message');
           if (successMsg) {
             successMsg.classList.add('show');
