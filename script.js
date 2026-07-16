@@ -3,6 +3,9 @@
    Government Schemes Information Portal
    ============================================ */
 
+/* ---------- Supabase Configuration ---------- */
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljemFhd3pkdXVlZ3N1cm16bGprIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMDk4MTYsImV4cCI6MjA5NjU4NTgxNn0.WSqV-znpcCtca7x5c2mhV9WxfoAyy_dNA3WBXtIsTxk";
+
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- Mobile Menu Toggle ---------- */
@@ -161,7 +164,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ---------- Contact Form Validation ---------- */
+  /* ---------- Contact Form Validation & Submission (Supabase) ---------- */
+  const SUPABASE_CONTACT_URL = "https://yczaawzduuegsurmzljk.supabase.co/rest/v1/contact_messages";
   const contactForm = document.getElementById('contactForm');
 
   if (contactForm) {
@@ -204,15 +208,50 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (isValid) {
-        // Show success message
-        const successMsg = document.querySelector('.success-message');
-        if (successMsg) {
-          successMsg.classList.add('show');
-          contactForm.reset();
-          setTimeout(function () {
-            successMsg.classList.remove('show');
-          }, 5000);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Sending...";
         }
+
+        const payload = {
+          name: nameField.value.trim(),
+          email: emailField.value.trim(),
+          subject: subjectField.value.trim(),
+          message: messageField.value.trim()
+        };
+
+        fetch(SUPABASE_CONTACT_URL, {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_KEY,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(function(response) {
+          if (!response.ok) throw new Error('Failed to send message');
+          const successMsg = document.querySelector('.success-message');
+          if (successMsg) {
+            successMsg.classList.add('show');
+            contactForm.reset();
+            setTimeout(function () {
+              successMsg.classList.remove('show');
+            }, 5000);
+          }
+        })
+        .catch(function(error) {
+          console.error("Error sending contact message:", error);
+          alert("There was an issue sending your message. Please try again or email us directly at durgasravan21@gmail.com");
+        })
+        .finally(function() {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Message";
+          }
+        });
       }
     });
 
@@ -435,7 +474,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* ---------- User Reviews System (Supabase Synchronized) ---------- */
 const SUPABASE_URL = "https://yczaawzduuegsurmzljk.supabase.co/rest/v1/yojana_reviews";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljemFhd3pkdXVlZ3N1cm16bGprIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMDk4MTYsImV4cCI6MjA5NjU4NTgxNn0.WSqV-znpcCtca7x5c2mhV9WxfoAyy_dNA3WBXtIsTxk";
 
 const DEFAULT_REVIEWS = [
   { name: "Ramesh Kumar", rating: 5, comment: "This site made it so simple to check PM Kisan status. Excellent guide!", date: "07 Jul 2026" },

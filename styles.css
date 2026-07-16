@@ -54,6 +54,10 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
+
+  /* Alias Variables (used in inline styles on scheme pages) */
+  --bg-light: #f8f9fa;
+  --primary-color: #0f3460;
 }
 
 /* ---------- Reset & Base ---------- */
@@ -68,6 +72,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 body {
@@ -78,6 +83,7 @@ body {
   background-color: var(--off-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1554,6 +1560,7 @@ li {
 
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .article-content {
@@ -1607,6 +1614,42 @@ li {
   .back-to-top {
     bottom: 1.25rem;
     right: 1.25rem;
+  }
+
+  /* Article content: tighter on small phones */
+  .article-content {
+    padding: 1rem;
+  }
+
+  /* Review cards: stack avatar above text on tiny screens */
+  .review-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .review-date {
+    font-size: 0.75rem;
+  }
+
+  /* Section padding: less breathing room on small phones */
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  /* Contact form: tighter on small phones */
+  .contact-grid {
+    gap: 1rem;
   }
 }
 
@@ -1744,7 +1787,7 @@ li {
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
-  stroke-linejoin="round";
+  stroke-linejoin: round;
   display: inline-block;
   vertical-align: middle;
 }
@@ -2011,5 +2054,32 @@ li {
   }
 }
 
+/* ---------- Global Image/Iframe Overflow Protection ---------- */
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
 
+iframe {
+  height: auto;
+  min-height: 200px;
+}
 
+/* ---------- Google AdSense CLS Protection ---------- */
+.adsbygoogle {
+  display: block;
+  overflow: hidden;
+  min-height: 50px;
+}
+
+/* Prevent AdSense auto-ads from breaking mobile layout */
+@media (max-width: 768px) {
+  ins.adsbygoogle {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+}
