@@ -567,15 +567,15 @@ def generate_page(s, schemes_list):
         description = f"Complete guide to {fullname}. Learn about eligibility, benefits, application process, and documents required."
     
     # 1. Overview text
-    if s["id"] in SCHEME_FACTS:
-        overview_text = f"The <strong>{fullname}</strong> is a key developmental initiative launched by the Government of India. This scheme represents a major milestone designed specifically to address critical needs in the <strong>{cat_info['name']}</strong> sector. By providing a comprehensive support mechanism, the initiative aims to target eligible beneficiaries across all states and Union Territories, ensuring that the benefits of developmental growth reach the grass-roots level. Under the supervision of the respective nodal Ministry, the scheme is backed by a substantial budgetary allocation, reflecting the government's commitment to social welfare, economic empowerment, and national development. Through transparent implementation channels such as Direct Benefit Transfer (DBT), Aadhaar-linked verification, and digital application tracking, the program minimizes intermediaries and maximizes efficiency, making it one of the most trusted welfare initiatives in the country today."
+    if "overview" in override:
+        overview_text = override["overview"]
+    elif s["id"] in SCHEME_FACTS:
+        overview_text = f"The <strong>{fullname}</strong> is a key developmental initiative launched by the Government of India. This scheme represents a major milestone designed specifically to address critical needs in the <strong>{cat_info['name']}</strong> sector. By providing a comprehensive support mechanism, the initiative aims to target eligible beneficiaries across all states and Union Territories, ensuring that the benefits of developmental growth reach the grass-roots level."
     else:
-        overview_text = s.get("intro", "")
-        if not overview_text:
-            overview_text = f"The <strong>{fullname}</strong> is an essential welfare program launched by the Government of India to support eligible beneficiaries in the <strong>{cat_info['name']}</strong> sector."
+        overview_text = s.get("intro", f"The <strong>{fullname}</strong> is an essential welfare program launched by the Government of India to support eligible beneficiaries in the <strong>{cat_info['name']}</strong> sector.")
 
     # 2. Benefits text & Table
-    if s["id"] in SCHEME_FACTS:
+    if "benefit" in override:
         benefits_text = override["benefit"]
         table_html = f"""<table>
           <thead>
@@ -603,7 +603,7 @@ def generate_page(s, schemes_list):
         table_html = s.get("table_html", "")
 
     # 3. Eligibility Criteria list
-    if s["id"] in SCHEME_FACTS:
+    if "eligibility" in override:
         eligibility_list = override["eligibility"]
     else:
         eligibility_list = s.get("eligibility_list", [
@@ -615,23 +615,31 @@ def generate_page(s, schemes_list):
     eligibility_html = "<ul>\n" + "\n".join([f"              <li>{item}</li>" for item in eligibility_list]) + "\n            </ul>"
 
     # Exclusions
-    exclusions_list = s.get("exclusions_list", [
-        "Institutional landholders or corporate entities.",
-        "Families with retired or serving government employees (except Group D/MTS staff).",
-        "Income tax payers from the preceding financial assessment year."
-    ])
+    if "exclusions" in override:
+        exclusions_list = override["exclusions"]
+    else:
+        exclusions_list = s.get("exclusions_list", [
+            "Institutional landholders or corporate entities.",
+            "Families with retired or serving government employees (except Group D/MTS staff).",
+            "Income tax payers from the preceding financial assessment year."
+        ])
     exclusions_html = "<ul>\n" + "\n".join([f"              <li>{item}</li>" for item in exclusions_list]) + "\n            </ul>"
 
     # 4. Documents Required list
-    documents_list = s.get("documents_list", [
-        "<strong>Aadhaar Card:</strong> Mandatory for biometric verification and identity mapping.",
-        "<strong>Proof of Address:</strong> Voter ID, utility bills, or domicile certificate.",
-        "<strong>Bank Account Passbook:</strong> Aadhaar-seeded bank account copy showing IFSC and account details."
-    ])
+    if "documents" in override:
+        documents_list = override["documents"]
+    else:
+        documents_list = s.get("documents_list", [
+            "<strong>Aadhaar Card:</strong> Mandatory for biometric verification and identity mapping.",
+            "<strong>Proof of Address:</strong> Voter ID, utility bills, or domicile certificate.",
+            "<strong>Bank Account Passbook:</strong> Aadhaar-seeded bank account copy showing IFSC and account details."
+        ])
     documents_html = "<ul>\n" + "\n".join([f"              <li>{item}</li>" for item in documents_list]) + "\n            </ul>"
 
     # 5. How to Apply steps
-    if s["id"] in SCHEME_FACTS:
+    if "apply_steps" in override:
+        apply_steps = override["apply_steps"]
+    elif s["id"] in SCHEME_FACTS:
         apply_steps = [
             f"Visit the official portal designated for the scheme at <strong>{override['portal'].replace('https://', '').replace('http://', '')}</strong>.",
             "On the homepage, select the 'New Registration' or 'Apply Online' option.",
@@ -656,7 +664,9 @@ def generate_page(s, schemes_list):
     apply_html = "<ol>\n" + "\n".join([f"              <li>{item}</li>" for item in apply_steps]) + "\n            </ol>"
 
     # 6. Status Check steps
-    if s["id"] in SCHEME_FACTS:
+    if "status_steps" in override:
+        status_steps = override["status_steps"]
+    elif s["id"] in SCHEME_FACTS:
         status_steps = [
             f"Go to the official portal at <strong>{override['portal'].replace('https://', '').replace('http://', '')}</strong>.",
             "Click on the 'Know Your Status' or 'Beneficiary Status' tab on the homepage.",
